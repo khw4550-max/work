@@ -26,6 +26,9 @@
     position:absolute; inset:0;
     width:1920px; height:1080px;
     display:none;
+    /* 한글이 단어 중간에서 잘리지 않고 띄어쓰기 단위로만 줄바꿈되도록 */
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
   .slide.active { display:block; }
 
@@ -258,30 +261,47 @@
   <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="아이스브레이킹" data-screen-label="05" data-speaker-notes="5분. 처음 보는 세 명과 인사." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="아이스브레이킹" data-screen-label="05" data-speaker-notes="약 2분. 이미 10인 1팀으로 착석해 있으므로 자리 이동 없이 옆·앞자리 팀원과 가볍게 인사. 이름/소속, Agent 주제, 도움받고 싶은 것 세 가지." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;right:-100px;top:180px;width:700px;height:700px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.10), rgba(0,111,255,0.02));"></div>
-  <div style="position:absolute;left:130px;top:150px;display:flex;align-items:center;gap:16px;">
+  <div style="position:absolute;right:-140px;top:150px;width:720px;height:720px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.10), rgba(0,111,255,0.02));"></div>
+  <div style="position:absolute;left:130px;top:140px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">ICE BREAKING · 5min</div>
+    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">ICE BREAKING · 2min</div>
   </div>
-  <div style="position:absolute;left:130px;top:220px;font-size:96px;font-weight:800;color:#1A1A1A;letter-spacing:-0.035em;line-height:1.1;">찾았다,<br /><span style="color:#006FFF;">내 짝꿍!</span></div>
-  <div style="position:absolute;left:132px;top:520px;width:780px;font-size:34px;font-weight:500;color:#5A5A60;line-height:1.5;">지금 자리에서 일어나, <span style="color:#1A1A1A;font-weight:700;">처음 보는 세 명</span>과 인사하고 아래 세 가지를 나눠 주세요.</div>
-  <div style="position:absolute;left:130px;top:700px;display:flex;gap:20px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:30px 36px;box-shadow:0 12px 30px rgba(16,32,64,0.06);width:300px;">
+  <div style="position:absolute;left:130px;top:210px;font-size:92px;font-weight:800;color:#1A1A1A;letter-spacing:-0.035em;line-height:1.12;">먼저,<br /><span style="color:#006FFF;">서로 인사부터</span></div>
+  <div style="position:absolute;left:132px;top:490px;width:1080px;font-size:32px;font-weight:500;color:#5A5A60;line-height:1.55;">이미 <span style="color:#1A1A1A;font-weight:700;">10명이 한 팀</span>으로 앉아 계십니다. 자리 이동 없이 <span style="color:#1A1A1A;font-weight:700;">옆·앞자리 팀원</span>과 가볍게 인사하며 아래 세 가지를 나눠 주세요.</div>
+  <div style="position:absolute;left:130px;top:660px;display:flex;gap:22px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:16px;padding:32px 36px;width:372px;">
       <div style="font-size:22px;font-weight:700;color:#006FFF;">01</div>
       <div style="margin-top:12px;font-size:32px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">이름과 소속</div>
+      <div style="margin-top:10px;font-size:22px;font-weight:500;color:#8C8C8C;">어느 부서에서 오셨는지</div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:30px 36px;box-shadow:0 12px 30px rgba(16,32,64,0.06);width:300px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:16px;padding:32px 36px;width:372px;">
       <div style="font-size:22px;font-weight:700;color:#006FFF;">02</div>
-      <div style="margin-top:12px;font-size:32px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">기획서 주제</div>
+      <div style="margin-top:12px;font-size:32px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">Agent 주제</div>
+      <div style="margin-top:10px;font-size:22px;font-weight:500;color:#8C8C8C;">어떤 것을 만들 것인지</div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:30px 36px;box-shadow:0 12px 30px rgba(16,32,64,0.06);width:300px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:16px;padding:32px 36px;width:372px;">
       <div style="font-size:22px;font-weight:700;color:#006FFF;">03</div>
-      <div style="margin-top:12px;font-size:32px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">4일간의 다짐</div>
+      <div style="margin-top:12px;font-size:32px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">도움받고 싶은 것</div>
+      <div style="margin-top:10px;font-size:22px;font-weight:500;color:#8C8C8C;">교육을 통해 기대하는 것</div>
     </div>
   </div>
-  <div style="position:absolute;right:170px;top:300px;width:420px;height:420px;border-radius:24px;border:1px dashed #C9D2E0;background:repeating-linear-gradient(45deg, #EDF1F7 0 12px, #F7F9FC 12px 24px);display:flex;align-items:center;justify-content:center;font-size:20px;color:#8C97A8;">일러스트 · 인사하는 사람들</div>
+  <div style="position:absolute;right:130px;top:300px;width:420px;display:flex;flex-direction:column;gap:20px;">
+    <div style="background:linear-gradient(155deg, #1785FF, #006FFF 55%, #0050BB);border-radius:22px;padding:40px;box-shadow:0 24px 50px rgba(0,111,255,0.28);position:relative;overflow:hidden;text-align:center;">
+      <div style="position:absolute;right:-50px;bottom:-60px;width:200px;height:200px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:rgba(255,255,255,0.10);"></div>
+      <div style="font-size:23px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.06em;">TIME</div>
+      <div style="margin-top:10px;font-size:96px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1;">2분</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:18px;padding:28px 32px;">
+      <div style="font-size:21px;font-weight:700;color:#8C8C8C;">팀 구성</div>
+      <div style="margin-top:10px;font-size:28px;font-weight:700;color:#1A1A1A;">10명 1팀 · 5개 팀</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:18px;padding:28px 32px;">
+      <div style="font-size:21px;font-weight:700;color:#8C8C8C;">진행 방식</div>
+      <div style="margin-top:10px;font-size:26px;font-weight:600;color:#1A1A1A;line-height:1.45;">자리 이동 없이<br />옆·앞자리 팀원과</div>
+    </div>
+  </div>
   <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
@@ -378,36 +398,7 @@
   </div>
 </section>
 
-<section class="slide" data-label="교육 취지" data-screen-label="09" data-speaker-notes="이 과정의 정의." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;right:-140px;top:60px;width:900px;height:900px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.09), rgba(0,111,255,0.01));"></div>
-  <div style="position:absolute;left:130px;top:150px;display:flex;align-items:center;gap:16px;">
-    <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">WHY THIS COURSE</div>
-  </div>
-  <div style="position:absolute;left:130px;top:230px;width:1180px;font-size:66px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;line-height:1.35;text-wrap:pretty;">
-    AI를 <span style="color:#006FFF;">아는 사람</span>이 아니라,<br />
-    AI로 <span style="color:#006FFF;">만들어내는 사람</span>을<br />
-    현업에서 길러내는 과정입니다.
-  </div>
-  <div style="position:absolute;left:130px;right:130px;bottom:170px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:32px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);">
-      <div style="font-size:22px;font-weight:700;color:#006FFF;">학습이 아니라 제작</div>
-      <div style="margin-top:12px;font-size:25px;font-weight:500;color:#5A5A60;line-height:1.5;">4일 뒤 각자 손에 동작하는 결과물이 남습니다</div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:32px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);">
-      <div style="font-size:22px;font-weight:700;color:#006FFF;">사내 업무 기반</div>
-      <div style="margin-top:12px;font-size:25px;font-weight:500;color:#5A5A60;line-height:1.5;">공모 기획서에 쓴 내 업무 과제를 그대로 다룹니다</div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:32px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);">
-      <div style="font-size:22px;font-weight:700;color:#006FFF;">역량의 공식 인증</div>
-      <div style="margin-top:12px;font-size:25px;font-weight:500;color:#5A5A60;line-height:1.5;">종합평가를 통과하면 SLIC 3 인증으로 남습니다</div>
-    </div>
-  </div>
-  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
-</section>
-
-<section class="slide" data-label="교육체계 4단계" data-screen-label="10" data-speaker-notes="Level 1~4 중 본 과정은 Level 3 Advanced." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="교육체계 4단계" data-screen-label="09" data-speaker-notes="Level 1~4 중 본 과정은 Level 3 Advanced." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
@@ -464,6 +455,35 @@
   <div style="position:absolute;left:130px;bottom:52px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
+<section class="slide" data-label="교육 취지" data-screen-label="10" data-speaker-notes="이 과정의 정의." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
+  <div style="position:absolute;right:-140px;top:60px;width:900px;height:900px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.09), rgba(0,111,255,0.01));"></div>
+  <div style="position:absolute;left:130px;top:150px;display:flex;align-items:center;gap:16px;">
+    <div style="width:44px;height:2px;background:#006FFF;"></div>
+    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">WHY THIS COURSE</div>
+  </div>
+  <div style="position:absolute;left:130px;top:230px;width:1180px;font-size:66px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;line-height:1.35;text-wrap:pretty;">
+    AI를 <span style="color:#006FFF;">아는 사람</span>이 아니라,<br />
+    AI로 <span style="color:#006FFF;">만들어내는 사람</span>을<br />
+    현업에서 길러내는 과정입니다.
+  </div>
+  <div style="position:absolute;left:130px;right:130px;bottom:170px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:32px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);">
+      <div style="font-size:22px;font-weight:700;color:#006FFF;">학습이 아니라 제작</div>
+      <div style="margin-top:12px;font-size:25px;font-weight:500;color:#5A5A60;line-height:1.5;">4일 뒤 각자 손에 동작하는 결과물이 남습니다</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:32px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);">
+      <div style="font-size:22px;font-weight:700;color:#006FFF;">사내 업무 기반</div>
+      <div style="margin-top:12px;font-size:23px;font-weight:500;color:#5A5A60;line-height:1.5;letter-spacing:-0.015em;white-space:nowrap;">공모 기획서에 쓴 업무과제를 그대로 다룹니다</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:32px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);">
+      <div style="font-size:22px;font-weight:700;color:#006FFF;">역량의 공식 인증</div>
+      <div style="margin-top:12px;font-size:25px;font-weight:500;color:#5A5A60;line-height:1.5;">종합평가를 통과하면 SLIC 3 인증으로 남습니다</div>
+    </div>
+  </div>
+  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
+</section>
+
 <section class="slide" data-label="SLIC 인증제" data-screen-label="11" data-speaker-notes="SLIC = Samsung Life AI Certificate. 본 과정은 SLIC 3." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
@@ -503,12 +523,12 @@
       <div style="font-size:44px;font-weight:800;color:#D5D7DD;letter-spacing:-0.02em;">04</div>
       <div style="margin-top:auto;text-align:right;">
         <div style="font-size:34px;font-weight:800;color:#1A1A1A;">SLIC 4</div>
-        <div style="margin-top:10px;font-size:24px;font-weight:500;color:#8C8C8C;">Expert 과정 수료 및 AICE Associate 자격</div>
+        <div style="margin-top:10px;font-size:21px;font-weight:500;color:#8C8C8C;letter-spacing:-0.02em;white-space:nowrap;">Expert 과정 수료 및 AICE Associate 자격</div>
       </div>
     </div>
   </div>
 
-  <div style="position:absolute;right:130px;top:340px;width:600px;background:linear-gradient(135deg, #1A1A1A, #2C2C33);border-radius:22px;padding:48px 46px;box-shadow:0 20px 46px rgba(16,32,64,0.18);height:464px;display:flex;flex-direction:column;">
+  <div style="position:absolute;right:130px;top:340px;width:600px;background:linear-gradient(135deg, #1A1A1A, #2C2C33);border-radius:22px;padding:48px 46px;box-shadow:0 20px 46px rgba(16,32,64,0.18);height:544px;display:flex;flex-direction:column;">
     <div style="font-size:24px;font-weight:600;color:#9BA3AF;letter-spacing:0.04em;">여러분이 받게 될 인증</div>
     <div style="margin-top:22px;font-size:88px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1;">SLIC 3</div>
     <div style="margin-top:26px;height:1px;background:rgba(255,255,255,0.16);"></div>
@@ -518,50 +538,93 @@
   <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="평가 기준" data-screen-label="12" data-speaker-notes="평가는 순위가 아니라 다음 단계 안내." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="평가 기준" data-screen-label="12" data-speaker-notes="최종 결과물 평가 5개 기준 100점. 80점 이상 SLIC 3 인정, 90점 이상 인사(자격)가점 1점. 야간 미니과제는 평가 미포함이지만 완성도에 도움. 야간 1:1 멘토링 운영." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
+  <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
     <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">EVALUATION</div>
   </div>
-  <div style="position:absolute;left:130px;top:152px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">무엇을 <span style="color:#006FFF;">평가</span>하나요</div>
-  <div style="position:absolute;left:132px;top:244px;font-size:26px;font-weight:500;color:#7A7A82;">4일차 최종 발표회에서 제출한 결과물을 기준으로 종합평가합니다</div>
+  <div style="position:absolute;left:130px;top:148px;font-size:58px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">무엇을 <span style="color:#006FFF;">평가</span>하나요</div>
+  <div style="position:absolute;left:132px;top:236px;font-size:25px;font-weight:500;color:#7A7A82;">4일차 최종 발표회에서 제출한 결과물을 5개 기준 · 100점으로 종합평가합니다</div>
 
-  <div style="position:absolute;left:130px;top:326px;width:1030px;display:flex;flex-direction:column;gap:16px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:28px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:76px;height:76px;flex:none;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #4D9BFF, #006FFF);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:#fff;">01</div>
-      <div style="flex:1;"><div style="font-size:34px;font-weight:800;color:#1A1A1A;letter-spacing:-0.02em;">문제 정의의 타당성</div><div style="margin-top:8px;font-size:24px;font-weight:500;color:#7A7A82;">실제 업무 Pain Point인지, AS-IS/TO-BE가 분명한지</div></div>
+  <div style="position:absolute;left:130px;top:310px;width:1040px;display:flex;flex-direction:column;gap:12px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:18px;padding:20px 34px;display:flex;align-items:center;gap:26px;">
+      <div style="width:88px;height:74px;flex:none;border-radius:14px;background:linear-gradient(150deg, #4D9BFF, #006FFF);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;">
+        <div style="font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1;">25</div>
+        <div style="margin-top:3px;font-size:15px;font-weight:600;opacity:0.85;">점</div>
+      </div>
+      <div style="width:340px;flex:none;font-size:27px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.3;">현업 문제정의 및 해결 적합성</div>
+      <div style="flex:1;font-size:20px;font-weight:500;color:#7A7A82;line-height:1.45;">문제의 증상이 아니라 실제 병목을 정의하고, Agent가 그 문제를 직접 해결하는지</div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:28px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:76px;height:76px;flex:none;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #1785FF, #006FFF);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:#fff;">02</div>
-      <div style="flex:1;"><div style="font-size:34px;font-weight:800;color:#1A1A1A;letter-spacing:-0.02em;">결과물의 실제 동작</div><div style="margin-top:8px;font-size:24px;font-weight:500;color:#7A7A82;">핵심 기능이 LLM API 연동으로 동작 — 하드코딩·규칙 매칭 대체 불가</div></div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:18px;padding:20px 34px;display:flex;align-items:center;gap:26px;">
+      <div style="width:88px;height:74px;flex:none;border-radius:14px;background:linear-gradient(150deg, #1785FF, #006FFF);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;">
+        <div style="font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1;">20</div>
+        <div style="margin-top:3px;font-size:15px;font-weight:600;opacity:0.85;">점</div>
+      </div>
+      <div style="width:340px;flex:none;font-size:27px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.3;">AI 기반 업무 플로우 재설계</div>
+      <div style="flex:1;font-size:20px;font-weight:500;color:#7A7A82;line-height:1.45;">AI를 덧붙인 수준이 아니라 업무 단계·순서·처리 방식을 실질적으로 개선했는지</div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:28px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:76px;height:76px;flex:none;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #006FFF, #0050BB);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:#fff;">03</div>
-      <div style="flex:1;"><div style="font-size:34px;font-weight:800;color:#1A1A1A;letter-spacing:-0.02em;">산출물 완성도</div><div style="margin-top:8px;font-size:24px;font-weight:500;color:#7A7A82;">문제정의서 · 요구사항 명세서 · 프로젝트 명세서(.md) · 최종 제출 양식</div></div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:18px;padding:20px 34px;display:flex;align-items:center;gap:26px;">
+      <div style="width:88px;height:74px;flex:none;border-radius:14px;background:linear-gradient(150deg, #006FFF, #0050BB);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;">
+        <div style="font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1;">15</div>
+        <div style="margin-top:3px;font-size:15px;font-weight:600;opacity:0.85;">점</div>
+      </div>
+      <div style="width:340px;flex:none;font-size:27px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.3;">User · AI 역할 분담 및 통제 설계</div>
+      <div style="flex:1;font-size:20px;font-weight:500;color:#7A7A82;line-height:1.45;">AI에 맡길 일과 사용자가 판단·책임질 일을 구분하고 결과를 통제할 수 있는지</div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:28px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:76px;height:76px;flex:none;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #33333B, #1A1A1A);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:#fff;">04</div>
-      <div style="flex:1;"><div style="font-size:34px;font-weight:800;color:#1A1A1A;letter-spacing:-0.02em;">비즈니스 기대효과</div><div style="margin-top:8px;font-size:24px;font-weight:500;color:#7A7A82;">현업 적용 가능성과 확산 가치가 발표에서 설명되는지</div></div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:18px;padding:20px 34px;display:flex;align-items:center;gap:26px;">
+      <div style="width:88px;height:74px;flex:none;border-radius:14px;background:linear-gradient(150deg, #0060DC, #003C93);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;">
+        <div style="font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1;">25</div>
+        <div style="margin-top:3px;font-size:15px;font-weight:600;opacity:0.85;">점</div>
+      </div>
+      <div style="width:340px;flex:none;font-size:27px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.3;">핵심 기능 구현 및 작동 완성도</div>
+      <div style="flex:1;font-size:20px;font-weight:500;color:#7A7A82;line-height:1.45;">목업·고정 결과 없이 핵심 사용자 시나리오가 제출된 Agent에서 실제로 작동하는지</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:18px;padding:20px 34px;display:flex;align-items:center;gap:26px;">
+      <div style="width:88px;height:74px;flex:none;border-radius:14px;background:linear-gradient(150deg, #33333B, #1A1A1A);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;">
+        <div style="font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1;">15</div>
+        <div style="margin-top:3px;font-size:15px;font-weight:600;opacity:0.85;">점</div>
+      </div>
+      <div style="width:340px;flex:none;font-size:27px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.3;">결과 품질 및 사용 재현성</div>
+      <div style="flex:1;font-size:20px;font-weight:500;color:#7A7A82;line-height:1.45;">정상·예외 입력에서 결과가 일관되고, 다른 사용자가 독립적으로 실행할 수 있는지</div>
     </div>
   </div>
 
-  <div style="position:absolute;right:130px;top:340px;width:590px;display:flex;flex-direction:column;gap:22px;">
-    <div style="background:linear-gradient(155deg, #1785FF, #006FFF 55%, #0050BB);border-radius:22px;padding:44px 42px;box-shadow:0 24px 50px rgba(0,111,255,0.28);position:relative;overflow:hidden;">
+  <div style="position:absolute;right:130px;top:310px;width:580px;display:flex;flex-direction:column;gap:18px;">
+    <div style="background:linear-gradient(155deg, #1785FF, #006FFF 55%, #0050BB);border-radius:22px;padding:34px 38px;box-shadow:0 22px 48px rgba(0,111,255,0.28);position:relative;overflow:hidden;">
       <div style="position:absolute;right:-60px;bottom:-70px;width:240px;height:240px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:rgba(255,255,255,0.10);"></div>
-      <div style="font-size:23px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.04em;">필수 요건</div>
-      <div style="margin-top:20px;font-size:38px;font-weight:800;color:#fff;letter-spacing:-0.025em;line-height:1.35;">4일 전 과정 출석<br />최종 발표 참여</div>
-      <div style="margin-top:22px;font-size:23px;font-weight:500;color:rgba(255,255,255,0.88);line-height:1.5;">야간 미니 과제 3회 제출도 평가 자료에 포함됩니다</div>
+      <div style="font-size:22px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.04em;">인정 기준</div>
+      <div style="margin-top:18px;display:flex;align-items:baseline;gap:14px;">
+        <div style="font-size:58px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1;">80점</div>
+        <div style="font-size:26px;font-weight:600;color:#fff;">이상 · SLIC 3 인정</div>
+      </div>
+      <div style="margin-top:16px;height:1px;background:rgba(255,255,255,0.22);"></div>
+      <div style="margin-top:16px;display:flex;align-items:baseline;gap:14px;">
+        <div style="font-size:38px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1;">90점</div>
+        <div style="font-size:23px;font-weight:600;color:rgba(255,255,255,0.9);">이상 · 인사(자격)가점 1점</div>
+      </div>
     </div>
-    <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:20px;padding:34px 38px;">
-      <div style="font-size:26px;font-weight:600;color:#2B2B31;line-height:1.55;">평가는 순위를 매기기 위한 것이 아니라, <span style="color:#006FFF;font-weight:700;">각자의 다음 단계</span>를 알려드리기 위한 것입니다.</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:18px;padding:26px 28px;">
+        <div style="font-size:19px;font-weight:700;color:#8C8C8C;">야간 미니과제</div>
+        <div style="margin-top:12px;font-size:21px;font-weight:500;color:#2B2B31;line-height:1.5;"><span style="color:#8C8C8C;font-weight:700;">평가에는 포함되지 않지만</span>, 참여하면 더 완성도 높은 Agent를 만들 수 있습니다</div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:18px;padding:26px 28px;">
+        <div style="font-size:19px;font-weight:700;color:#006FFF;">야간 1:1 멘토링</div>
+        <div style="margin-top:12px;font-size:21px;font-weight:500;color:#2B2B31;line-height:1.5;">팀별 코치님께 막힌 부분을 직접 코칭받을 수 있습니다</div>
+      </div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:30px 38px;box-shadow:0 12px 30px rgba(16,32,64,0.06);">
-      <div style="font-size:21px;font-weight:700;color:#8C8C8C;">중간 점검 2회</div>
-      <div style="margin-top:10px;font-size:25px;font-weight:500;color:#5A5A60;line-height:1.5;">2일차·3일차 17:00에 강사 피드백을 받습니다</div>
+
+    <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:20px;padding:28px 34px;">
+      <div style="font-size:24px;font-weight:600;color:#2B2B31;line-height:1.55;">4일간의 수업을 잘 따라오면 어렵지 않게 수료할 수 있습니다. <span style="color:#006FFF;font-weight:700;">인별 Report</span>로 결과물의 강점과 개선 필요 영역을 점검받습니다.</div>
     </div>
   </div>
-  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
+
+  <div style="position:absolute;left:130px;right:130px;bottom:46px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
+    <div style="font-size:19px;font-weight:500;color:#B0B0B8;">※ 2일차 · 3일차 17:00 중간 점검에서 강사 피드백을 받습니다</div>
+  </div>
 </section>
 
 <section class="slide" data-label="간지 03" data-screen-label="13" data-speaker-notes="4일간 무엇을 하는지." style="position:relative;overflow:hidden;background:radial-gradient(85% 80% at 12% 15%, rgba(0,111,255,0.28), rgba(0,111,255,0) 60%), radial-gradient(70% 70% at 100% 100%, rgba(0,111,255,0.16), rgba(0,111,255,0) 55%), #0E1116;">
@@ -578,118 +641,86 @@
   <div style="position:absolute;right:130px;bottom:110px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="3개 모듈" data-screen-label="14" data-speaker-notes="모듈별 컬러로 구분. 1일차 핵심교육 / 2~3일차 집중개발 / 4일차 결과물공유." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.10), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="3개 모듈 · 4일 흐름" data-screen-label="14" data-speaker-notes="3개 모듈이 4일에 어떻게 배치되는지. 배우고 → 만들고 → 증명합니다. 1~3일차는 19:00~21:00 야간 세션이 이어진다." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.10), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
+  <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">CURRICULUM</div>
+    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">CURRICULUM · 4-DAY FLOW</div>
   </div>
-  <div style="position:absolute;left:130px;top:152px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">3개 모듈, <span style="color:#006FFF;">4일간의 학습 흐름</span></div>
-  <div style="position:absolute;right:130px;top:176px;font-size:24px;font-weight:500;color:#8C8C8C;">총 29.5시간 · 야간 세션 포함</div>
+  <div style="position:absolute;left:130px;top:148px;font-size:58px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">3개 모듈, 배우고 → 만들고 → <span style="color:#006FFF;">증명합니다</span></div>
+  <div style="position:absolute;right:130px;top:166px;font-size:24px;font-weight:500;color:#8C8C8C;">총 29.5시간 · 야간 세션 포함</div>
 
-  <div style="position:absolute;left:130px;right:130px;top:310px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:40px 36px;height:530px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;position:relative;overflow:hidden;">
+  <div style="position:absolute;left:130px;right:130px;top:280px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:40px 36px;height:560px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;position:relative;overflow:hidden;">
       <div style="position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg, #7DBBFF, #22A7F5);"></div>
       <div style="display:flex;align-items:center;justify-content:space-between;">
         <div style="width:72px;height:72px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #7DBBFF, #22A7F5);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;">01</div>
         <div style="font-size:21px;font-weight:700;color:#0C8FE8;background:rgba(34,167,245,0.10);border-radius:999px;padding:10px 20px;">1일차 · 9.5h</div>
       </div>
-      <div style="margin-top:28px;font-size:40px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">핵심교육</div>
-      <div style="margin-top:10px;font-size:23px;font-weight:500;color:#8C8C8C;">AI 트렌드 · 바이브코딩 · Claude 활용</div>
-      <div style="margin-top:26px;height:1px;background:#EDEEF2;"></div>
-      <div style="margin-top:24px;display:flex;flex-direction:column;gap:15px;">
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">AI 트렌드와 Claude 기초, 바이브코딩 개념</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">미니 빌드 챌린지 (팀별 웹앱 1개)</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">API · MCP · Connector로 애플리케이션 확장</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">LLM API 기초 · Claude Skills 데이터 분석</div></div>
+      <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+        <div style="font-size:18px;font-weight:700;color:#fff;background:linear-gradient(#7DBBFF, #22A7F5);border-radius:8px;padding:8px 14px;white-space:nowrap;">DAY 1 · 이해</div>
+        <div style="font-size:19px;font-weight:600;color:#8C8C8C;white-space:nowrap;">9:30 ~ 21:00</div>
+      </div>
+      <div style="margin-top:22px;font-size:40px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">핵심교육</div>
+      <div style="margin-top:8px;font-size:22px;font-weight:500;color:#8C8C8C;">AI 트렌드 · 바이브코딩 · Claude 활용</div>
+      <div style="margin-top:24px;height:1px;background:#EDEEF2;"></div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">AI 트렌드와 Claude 기초 · 바이브코딩</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">미니 빌드 챌린지 (팀별 웹앱 1개)</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">API · MCP · Connector 확장</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#22A7F5;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">LLM API 기초 · Claude Skills 분석</div></div>
       </div>
     </div>
-
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:40px 36px;height:530px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;position:relative;overflow:hidden;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:40px 36px;height:560px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;position:relative;overflow:hidden;">
       <div style="position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg, #1785FF, #0050BB);"></div>
       <div style="display:flex;align-items:center;justify-content:space-between;">
         <div style="width:72px;height:72px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #1785FF, #0050BB);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;">02</div>
         <div style="font-size:21px;font-weight:700;color:#006FFF;background:rgba(0,111,255,0.09);border-radius:999px;padding:10px 20px;">2~3일차 · 13h</div>
       </div>
-      <div style="margin-top:28px;font-size:40px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">집중개발 및 구현</div>
-      <div style="margin-top:10px;font-size:23px;font-weight:500;color:#8C8C8C;">문제 정의부터 End-to-End 구현까지</div>
-      <div style="margin-top:26px;height:1px;background:#EDEEF2;"></div>
-      <div style="margin-top:24px;display:flex;flex-direction:column;gap:15px;">
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">사내 AI 시스템 구축 3대 원칙 · 개발 룰</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">문제 정의 &amp; 요구사항 분석, MVP 범위 확정</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">아키텍처 설계 · 프로젝트 명세서 작성</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">코드 뼈대 생성 → 핵심 기능 → End-to-End 구현</div></div>
+      <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+        <div style="font-size:18px;font-weight:700;color:#fff;background:linear-gradient(#1785FF, #0050BB);border-radius:8px;padding:8px 14px;white-space:nowrap;">DAY 2 설계 → DAY 3 구현</div>
+        <div style="font-size:19px;font-weight:600;color:#8C8C8C;white-space:nowrap;">9:00 ~ 21:00</div>
+      </div>
+      <div style="margin-top:22px;font-size:40px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">집중개발 및 구현</div>
+      <div style="margin-top:8px;font-size:22px;font-weight:500;color:#8C8C8C;">문제 정의부터 End-to-End 구현까지</div>
+      <div style="margin-top:24px;height:1px;background:#EDEEF2;"></div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">사내 AI 구축 3대 원칙 · 개발 룰</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">문제 정의 &amp; 요구사항 분석 · MVP 범위</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">아키텍처 설계 · 프로젝트 명세서</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#006FFF;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">코드 뼈대 → 핵심 기능 → End-to-End</div></div>
       </div>
     </div>
-
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:40px 36px;height:530px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;position:relative;overflow:hidden;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:40px 36px;height:560px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;position:relative;overflow:hidden;">
       <div style="position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg, #16305E, #0B1B36);"></div>
       <div style="display:flex;align-items:center;justify-content:space-between;">
         <div style="width:72px;height:72px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #16305E, #0B1B36);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;">03</div>
         <div style="font-size:21px;font-weight:700;color:#16305E;background:rgba(22,48,94,0.08);border-radius:999px;padding:10px 20px;">4일차 · 7h</div>
       </div>
-      <div style="margin-top:28px;font-size:40px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">결과물 공유</div>
-      <div style="margin-top:10px;font-size:23px;font-weight:500;color:#8C8C8C;">검증 · 발표 · 종합평가</div>
-      <div style="margin-top:26px;height:1px;background:#EDEEF2;"></div>
-      <div style="margin-top:24px;display:flex;flex-direction:column;gap:15px;">
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">시연 시나리오 테스트 · 버그 수정 · UI 폴리싱</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">최종 제출 양식 · 발표자료 작성 및 리허설</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">팀별 발표·시연 → 전체 우수사례 공유</div></div>
-        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:12px;flex:none;"></div><div style="font-size:23px;font-weight:500;color:#2B2B31;line-height:1.45;">과정 리뷰 · 설문조사</div></div>
+      <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+        <div style="font-size:18px;font-weight:700;color:#fff;background:linear-gradient(#16305E, #0B1B36);border-radius:8px;padding:8px 14px;white-space:nowrap;">DAY 4 · 증명</div>
+        <div style="font-size:19px;font-weight:600;color:#8C8C8C;white-space:nowrap;">9:00 ~ 17:00</div>
+      </div>
+      <div style="margin-top:22px;font-size:40px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">결과물 공유</div>
+      <div style="margin-top:8px;font-size:22px;font-weight:500;color:#8C8C8C;">검증 · 발표 · 종합평가</div>
+      <div style="margin-top:24px;height:1px;background:#EDEEF2;"></div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">시연 테스트 · 버그 수정 · UI 폴리싱</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">최종 제출 양식 · 발표자료 · 리허설</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">팀별 발표·시연 → 우수사례 공유</div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:8px;height:8px;border-radius:2px;background:#16305E;margin-top:11px;flex:none;"></div><div style="font-size:22px;font-weight:500;color:#2B2B31;line-height:1.45;">과정 리뷰 · 설문조사</div></div>
       </div>
     </div>
   </div>
-  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
-</section>
+  <div style="position:absolute;left:130px;right:130px;top:876px;height:4px;border-radius:2px;background:linear-gradient(90deg, #7DBBFF, #22A7F5 25%, #1785FF 50%, #0060DC 72%, #16305E);"></div>
 
-
-<section class="slide" data-label="4일 학습 흐름" data-screen-label="15" data-speaker-notes="일자별 컬러가 모듈 컬러와 연결된다." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
-    <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">4-DAY FLOW</div>
-  </div>
-  <div style="position:absolute;left:130px;top:152px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">배우고 → 만들고 → <span style="color:#006FFF;">증명합니다</span></div>
-
-  <div style="position:absolute;left:130px;right:130px;top:330px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
-    <div style="background:linear-gradient(160deg, #7DBBFF, #22A7F5);border-radius:20px;padding:36px 34px;height:400px;box-shadow:0 18px 40px rgba(34,167,245,0.22);display:flex;flex-direction:column;">
-      <div style="font-size:21px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:0.06em;">DAY 1 · 이해</div>
-      <div style="margin-top:16px;font-size:44px;font-weight:800;color:#fff;letter-spacing:-0.03em;">핵심교육</div>
-      <div style="margin-top:20px;height:1px;background:rgba(255,255,255,0.35);"></div>
-      <div style="margin-top:20px;font-size:24px;font-weight:500;color:#fff;line-height:1.5;">도구를 익히고, 팀으로 첫 웹앱을 완성합니다</div>
-      <div style="margin-top:auto;font-size:21px;font-weight:600;color:rgba(255,255,255,0.85);">9:30 ~ 21:00</div>
-    </div>
-    <div style="background:linear-gradient(160deg, #1785FF, #0060DC);border-radius:20px;padding:36px 34px;height:400px;box-shadow:0 18px 40px rgba(0,111,255,0.24);display:flex;flex-direction:column;">
-      <div style="font-size:21px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:0.06em;">DAY 2 · 설계</div>
-      <div style="margin-top:16px;font-size:44px;font-weight:800;color:#fff;letter-spacing:-0.03em;">집중개발</div>
-      <div style="margin-top:20px;height:1px;background:rgba(255,255,255,0.35);"></div>
-      <div style="margin-top:20px;font-size:24px;font-weight:500;color:#fff;line-height:1.5;">문제를 정의하고 아키텍처를 설계해 코드 뼈대를 만듭니다</div>
-      <div style="margin-top:auto;font-size:21px;font-weight:600;color:rgba(255,255,255,0.85);">9:00 ~ 21:00</div>
-    </div>
-    <div style="background:linear-gradient(160deg, #0060DC, #003C93);border-radius:20px;padding:36px 34px;height:400px;box-shadow:0 18px 40px rgba(0,80,187,0.26);display:flex;flex-direction:column;">
-      <div style="font-size:21px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:0.06em;">DAY 3 · 구현</div>
-      <div style="margin-top:16px;font-size:44px;font-weight:800;color:#fff;letter-spacing:-0.03em;">End-to-End</div>
-      <div style="margin-top:20px;height:1px;background:rgba(255,255,255,0.35);"></div>
-      <div style="margin-top:20px;font-size:24px;font-weight:500;color:#fff;line-height:1.5;">데이터 연동과 AI 핵심 로직까지 실제로 작동시킵니다</div>
-      <div style="margin-top:auto;font-size:21px;font-weight:600;color:rgba(255,255,255,0.85);">9:00 ~ 21:00</div>
-    </div>
-    <div style="background:linear-gradient(160deg, #16305E, #0B1B36);border-radius:20px;padding:36px 34px;height:400px;box-shadow:0 18px 40px rgba(11,27,54,0.24);display:flex;flex-direction:column;">
-      <div style="font-size:21px;font-weight:700;color:#9BB0D0;letter-spacing:0.06em;">DAY 4 · 증명</div>
-      <div style="margin-top:16px;font-size:44px;font-weight:800;color:#fff;letter-spacing:-0.03em;">결과물 공유</div>
-      <div style="margin-top:20px;height:1px;background:rgba(255,255,255,0.20);"></div>
-      <div style="margin-top:20px;font-size:24px;font-weight:500;color:#D6E0F0;line-height:1.5;">완성된 결과물을 직접 시연하고 종합평가를 받습니다</div>
-      <div style="margin-top:auto;font-size:21px;font-weight:600;color:#9BB0D0;">9:00 ~ 17:00</div>
-    </div>
-  </div>
-  <div style="position:absolute;left:130px;right:130px;top:770px;height:4px;border-radius:2px;background:linear-gradient(90deg, #7DBBFF, #22A7F5 25%, #1785FF 50%, #0060DC 72%, #16305E);"></div>
-
-  <div style="position:absolute;left:130px;right:130px;bottom:56px;display:flex;justify-content:space-between;align-items:center;">
+  <div style="position:absolute;left:130px;right:130px;bottom:52px;display:flex;justify-content:space-between;align-items:center;">
     <div style="font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
-    <div style="font-size:22px;font-weight:600;color:#006FFF;">1~3일차는 19:00~21:00 야간 미니 과제가 이어집니다</div>
+    <div style="font-size:22px;font-weight:600;color:#006FFF;">1~3일차는 19:00~21:00 야간 세션이 이어집니다</div>
   </div>
 </section>
 
-<section class="slide" data-label="학습목표" data-screen-label="16" data-speaker-notes="4일 뒤 갖게 될 것 세 가지." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="학습목표" data-screen-label="15" data-speaker-notes="4일 뒤 갖게 될 것 세 가지." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
@@ -725,7 +756,7 @@
   <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="산출물 로드맵" data-screen-label="17" data-speaker-notes="4일간 제출해야 하는 산출물 전체." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="산출물 로드맵" data-screen-label="16" data-speaker-notes="4일간 제출해야 하는 산출물 전체." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
@@ -813,7 +844,7 @@
   <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="일정 총괄" data-screen-label="18" data-speaker-notes="4일 전체 한 장 요약. 상세는 다음 4장." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.10), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 0% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="일정 총괄" data-screen-label="17" data-speaker-notes="4일 전체 한 장 요약. 상세는 다음 4장. 2~3일차 야간에는 1:1 멘토링을 함께 운영." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.10), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 0% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:100px;display:flex;align-items:baseline;gap:28px;">
     <div style="font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">4일간 <span style="color:#006FFF;">타임테이블</span></div>
@@ -821,89 +852,86 @@
   </div>
   <div style="position:absolute;right:130px;top:104px;display:flex;gap:12px;">
     <div style="background:#fff;border:1px solid rgba(26,26,26,0.08);border-radius:999px;padding:11px 22px;font-size:20px;font-weight:600;color:#5A5A60;">Lunch : 12:00 ~ 13:00</div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.08);border-radius:999px;padding:11px 22px;font-size:20px;font-weight:600;color:#5A5A60;">Dinner : 17:30 ~ 18:30</div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.08);border-radius:999px;padding:11px 22px;font-size:20px;font-weight:600;color:#5A5A60;">Dinner : 18:00 ~ 19:00</div>
   </div>
 
-  <div style="position:absolute;left:130px;right:130px;top:230px;display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:0 20px;">
-    <div style="font-size:20px;font-weight:600;color:#8C8C8C;letter-spacing:0.04em;padding-bottom:14px;">일자 / 구분</div>
+  <div style="position:absolute;left:130px;right:130px;top:230px;display:grid;grid-template-columns:240px 1.15fr 1.15fr 0.7fr;gap:20px;">
+    <div style="font-size:20px;font-weight:600;color:#8C8C8C;letter-spacing:0.04em;padding-bottom:14px;">일자 / 모듈</div>
     <div style="font-size:20px;font-weight:600;color:#8C8C8C;letter-spacing:0.04em;padding-bottom:14px;">오전</div>
     <div style="font-size:20px;font-weight:600;color:#8C8C8C;letter-spacing:0.04em;padding-bottom:14px;">오후</div>
     <div style="font-size:20px;font-weight:600;color:#8C8C8C;letter-spacing:0.04em;padding-bottom:14px;">야간 19:00 ~ 21:00</div>
   </div>
 
-  <div style="position:absolute;left:130px;right:130px;top:278px;display:flex;flex-direction:column;gap:14px;">
-    <div style="display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:20px;">
-      <div style="background:linear-gradient(160deg, #7DBBFF, #22A7F5);border-radius:16px;padding:22px 26px;box-shadow:0 14px 30px rgba(34,167,245,0.22);">
-        <div style="font-size:34px;font-weight:800;color:#fff;letter-spacing:-0.02em;">1일차</div>
-        <div style="margin-top:6px;font-size:19px;font-weight:600;color:rgba(255,255,255,0.85);">핵심교육 · 9:30~21:00</div>
+  <div style="position:absolute;left:130px;right:130px;top:278px;display:flex;flex-direction:column;gap:20px;">
+    <div style="display:grid;grid-template-columns:240px 1.15fr 1.15fr 0.7fr;gap:20px;">
+      <div style="background:linear-gradient(160deg, #7DBBFF, #22A7F5);border-radius:16px;padding:34px 26px;box-shadow:0 14px 30px rgba(34,167,245,0.22);display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:21px;font-weight:700;color:rgba(255,255,255,0.85);">1일차</div>
+        <div style="margin-top:6px;font-size:30px;font-weight:800;color:#fff;letter-spacing:-0.025em;">핵심교육</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#0C8FE8;">2.5h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">OT · AI 트렌드와 Claude 기초 · 미니 빌드 챌린지</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">OT · AI 트렌드 · 미니 빌드 챌린지</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#0C8FE8;">5.0h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">API·MCP 확장 · LLM API 기초 · Claude Skills 데이터 분석</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">API·MCP 확장 · LLM API · Claude Skills</div>
       </div>
-      <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:16px;padding:20px 26px;">
+      <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:16px;padding:32px 24px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#006FFF;">미니 과제</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">데이터 요약 미니 앱 만들기</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;line-height:1.4;">데이터 요약 미니 앱</div>
       </div>
     </div>
-
-    <div style="display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:20px;">
-      <div style="background:linear-gradient(160deg, #1785FF, #0060DC);border-radius:16px;padding:22px 26px;box-shadow:0 14px 30px rgba(0,111,255,0.22);">
-        <div style="font-size:34px;font-weight:800;color:#fff;letter-spacing:-0.02em;">2일차</div>
-        <div style="margin-top:6px;font-size:19px;font-weight:600;color:rgba(255,255,255,0.85);">집중개발 · 9:00~21:00</div>
+    <div style="display:grid;grid-template-columns:240px 1.15fr 1.15fr 0.7fr;gap:20px;">
+      <div style="background:linear-gradient(160deg, #1785FF, #0060DC);border-radius:16px;padding:34px 26px;box-shadow:0 14px 30px rgba(0,111,255,0.22);display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:21px;font-weight:700;color:rgba(255,255,255,0.85);">2일차</div>
+        <div style="margin-top:6px;font-size:30px;font-weight:800;color:#fff;letter-spacing:-0.025em;">집중개발</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#006FFF;">3.0h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">사내 구축 가이드 · 서비스 구조 · 문제 정의 &amp; 요구사항 분석</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">구축 가이드 · 문제 정의 &amp; 요구사항 분석</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#006FFF;">5.0h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">아키텍처 설계 · 코드 뼈대 생성 · 중간점검 ①</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">아키텍처 설계 · 코드 뼈대 생성 · 중간점검 ①</div>
       </div>
-      <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:16px;padding:20px 26px;">
-        <div style="font-size:19px;font-weight:700;color:#006FFF;">미니 과제</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">MVP 핵심 기능 타당성 프로토타입</div>
+      <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:16px;padding:32px 24px;display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:19px;font-weight:700;color:#006FFF;">미니 과제 · 1:1 멘토링</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;line-height:1.4;">MVP 핵심 기능 프로토타입</div>
       </div>
     </div>
-
-    <div style="display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:20px;">
-      <div style="background:linear-gradient(160deg, #0060DC, #003C93);border-radius:16px;padding:22px 26px;box-shadow:0 14px 30px rgba(0,80,187,0.24);">
-        <div style="font-size:34px;font-weight:800;color:#fff;letter-spacing:-0.02em;">3일차</div>
-        <div style="margin-top:6px;font-size:19px;font-weight:600;color:rgba(255,255,255,0.85);">구현 · 9:00~21:00</div>
+    <div style="display:grid;grid-template-columns:240px 1.15fr 1.15fr 0.7fr;gap:20px;">
+      <div style="background:linear-gradient(160deg, #0060DC, #003C93);border-radius:16px;padding:34px 26px;box-shadow:0 14px 30px rgba(0,80,187,0.24);display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:21px;font-weight:700;color:rgba(255,255,255,0.85);">3일차</div>
+        <div style="margin-top:6px;font-size:30px;font-weight:800;color:#fff;letter-spacing:-0.025em;">구현</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#0050BB;">3.0h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">핵심 기능 1차 구현 · UI 프레임 확인 · 공통 Q&amp;A</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">핵심 기능 1차 구현 · UI 프레임 확인</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#0050BB;">4.5h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">End-to-End 구현 · 데이터 연동 · 중간점검 ②</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">End-to-End 구현 · 데이터 연동 · 중간점검 ②</div>
       </div>
-      <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:16px;padding:20px 26px;">
-        <div style="font-size:19px;font-weight:700;color:#006FFF;">미니 과제</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">핵심 기능 완성도 높이기</div>
+      <div style="background:#F5F8FD;border:1px solid rgba(0,111,255,0.14);border-radius:16px;padding:32px 24px;display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:19px;font-weight:700;color:#006FFF;">미니 과제 · 1:1 멘토링</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;line-height:1.4;">핵심 기능 완성도 높이기</div>
       </div>
     </div>
-
-    <div style="display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:20px;">
-      <div style="background:linear-gradient(160deg, #16305E, #0B1B36);border-radius:16px;padding:22px 26px;box-shadow:0 14px 30px rgba(11,27,54,0.22);">
-        <div style="font-size:34px;font-weight:800;color:#fff;letter-spacing:-0.02em;">4일차</div>
-        <div style="margin-top:6px;font-size:19px;font-weight:600;color:#9BB0D0;">결과물 공유 · 9:00~17:00</div>
+    <div style="display:grid;grid-template-columns:240px 1.15fr 1.15fr 0.7fr;gap:20px;">
+      <div style="background:linear-gradient(160deg, #16305E, #0B1B36);border-radius:16px;padding:34px 26px;box-shadow:0 14px 30px rgba(11,27,54,0.22);display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:21px;font-weight:700;color:rgba(255,255,255,0.85);">4일차</div>
+        <div style="margin-top:6px;font-size:30px;font-weight:800;color:#fff;letter-spacing:-0.025em;">결과물 공유</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#16305E;">3.0h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">테스트 &amp; 마무리 (버그 수정, UI 폴리싱) · 발표 준비</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">테스트 &amp; 마무리 · 발표 준비</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:16px;padding:20px 26px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 10px 26px rgba(16,32,64,0.05);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;">
         <div style="font-size:19px;font-weight:700;color:#16305E;">4.0h</div>
-        <div style="margin-top:8px;font-size:22px;font-weight:500;color:#2B2B31;line-height:1.5;">최종 발표회 (팀별 → 전체 우수사례) · 과정 마무리</div>
+        <div style="margin-top:8px;font-size:21px;font-weight:500;color:#2B2B31;white-space:nowrap;">최종 발표회 · 과정 마무리</div>
       </div>
-      <div style="background:#fff;border:1px dashed #D5DBE5;border-radius:16px;padding:20px 26px;display:flex;align-items:center;">
-        <div style="font-size:22px;font-weight:500;color:#B0B0B8;">야간 세션 없음 · 17:00 종료</div>
+      <div style="background:#fff;border:1px dashed #D5DBE5;border-radius:16px;padding:32px 24px;display:flex;align-items:center;">
+        <div style="font-size:21px;font-weight:500;color:#B0B0B8;line-height:1.4;">야간 세션 없음 · 17:00 종료</div>
       </div>
     </div>
   </div>
@@ -914,7 +942,7 @@
   </div>
 </section>
 
-<section class="slide" data-label="1일차 상세" data-screen-label="19" data-speaker-notes="1일차 세부 시간표." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(34,167,245,0.12), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="1일차 상세" data-screen-label="18" data-speaker-notes="1일차 세부 시간표." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(34,167,245,0.12), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:20px;">
     <div style="background:linear-gradient(150deg, #7DBBFF, #22A7F5);border-radius:14px;padding:12px 22px;font-size:24px;font-weight:800;color:#fff;">DAY 1</div>
@@ -943,7 +971,7 @@
       <div style="width:190px;flex:none;font-size:25px;font-weight:800;color:#0C8FE8;letter-spacing:-0.01em;">15:00 ~ 16:00</div>
       <div><div style="font-size:27px;font-weight:700;color:#1A1A1A;">LLM API 기초 및 활용</div><div style="margin-top:8px;font-size:22px;font-weight:500;color:#7A7A82;line-height:1.5;">API 기본 구조와 호출 방식, Temperature·Max Tokens 조절법</div></div>
     </div>
-    <div style="background:#fff;border:2px solid #22A7F5;border-radius:18px;padding:28px 32px;box-shadow:0 12px 30px rgba(34,167,245,0.16);display:flex;gap:26px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:28px 32px;box-shadow:0 10px 26px rgba(16,32,64,0.05);display:flex;gap:26px;">
       <div style="width:190px;flex:none;font-size:25px;font-weight:800;color:#0C8FE8;letter-spacing:-0.01em;">11:00 ~ 12:00</div>
       <div><div style="display:flex;align-items:center;gap:12px;"><div style="font-size:27px;font-weight:700;color:#1A1A1A;">[워밍업] 미니 빌드 챌린지</div><div style="font-size:17px;font-weight:700;color:#fff;background:#22A7F5;border-radius:6px;padding:4px 10px;">산출물</div></div><div style="margin-top:8px;font-size:22px;font-weight:500;color:#7A7A82;line-height:1.5;">팀별 Claude Code로 간단한 웹앱 1개 완성 · 결과물 공유</div></div>
     </div>
@@ -961,7 +989,7 @@
   <div style="position:absolute;left:130px;bottom:44px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="2일차 상세" data-screen-label="20" data-speaker-notes="2일차 세부 시간표." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="2일차 상세" data-screen-label="19" data-speaker-notes="2일차 세부 시간표." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:20px;">
     <div style="background:linear-gradient(150deg, #1785FF, #0060DC);border-radius:14px;padding:12px 22px;font-size:24px;font-weight:800;color:#fff;">DAY 2</div>
@@ -982,7 +1010,7 @@
       <div style="width:190px;flex:none;font-size:25px;font-weight:800;color:#006FFF;">13:00 ~ 14:00</div>
       <div><div style="display:flex;align-items:center;gap:12px;"><div style="font-size:27px;font-weight:700;color:#1A1A1A;">[구조 설계] ③ 아키텍처 설계</div><div style="font-size:17px;font-weight:700;color:#fff;background:#006FFF;border-radius:6px;padding:4px 10px;">산출물</div></div><div style="margin-top:8px;font-size:22px;font-weight:500;color:#7A7A82;line-height:1.5;">서비스 흐름 정리 · 기술 스택 확정 · 프로젝트 명세서(.md) 작성</div></div>
     </div>
-    <div style="background:#fff;border:2px solid #006FFF;border-radius:18px;padding:26px 32px;box-shadow:0 12px 30px rgba(0,111,255,0.14);display:flex;gap:26px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:26px 32px;box-shadow:0 10px 26px rgba(16,32,64,0.05);display:flex;gap:26px;">
       <div style="width:190px;flex:none;font-size:25px;font-weight:800;color:#006FFF;">10:00 ~ 11:30</div>
       <div><div style="display:flex;align-items:center;gap:12px;"><div style="font-size:27px;font-weight:700;color:#1A1A1A;">문제 정의 &amp; 요구사항 분석</div><div style="font-size:17px;font-weight:700;color:#fff;background:#006FFF;border-radius:6px;padding:4px 10px;">산출물</div></div><div style="margin-top:8px;font-size:22px;font-weight:500;color:#7A7A82;line-height:1.5;">서비스 구조 이해 · Pain Point 도출 · AS-IS/TO-BE · MVP 범위 확정</div></div>
     </div>
@@ -1008,7 +1036,7 @@
   <div style="position:absolute;left:130px;bottom:38px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="3일차 상세" data-screen-label="21" data-speaker-notes="3일차 세부 시간표." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(0,80,187,0.11), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="3일차 상세" data-screen-label="20" data-speaker-notes="3일차 세부 시간표." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(0,80,187,0.11), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:20px;">
     <div style="background:linear-gradient(150deg, #0060DC, #003C93);border-radius:14px;padding:12px 22px;font-size:24px;font-weight:800;color:#fff;">DAY 3</div>
@@ -1030,7 +1058,7 @@
       <div style="width:210px;flex:none;font-size:26px;font-weight:800;color:#8C8C8C;">11:30 ~ 12:00</div>
       <div style="flex:1;"><div style="font-size:28px;font-weight:700;color:#5A5A60;">공통 Q&amp;A</div><div style="margin-top:6px;font-size:22px;font-weight:500;color:#8C8C8C;">프로젝트 질의사항 중 핵심 질문</div></div>
     </div>
-    <div style="background:#fff;border:2px solid #0050BB;border-radius:18px;padding:30px 36px;box-shadow:0 12px 32px rgba(0,80,187,0.14);display:flex;gap:34px;align-items:flex-start;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:30px 36px;box-shadow:0 10px 26px rgba(16,32,64,0.05);display:flex;gap:34px;align-items:flex-start;">
       <div style="width:210px;flex:none;font-size:26px;font-weight:800;color:#0050BB;">13:30 ~ 17:00</div>
       <div style="flex:1;"><div style="font-size:30px;font-weight:700;color:#1A1A1A;">[집중 개발] ④-2 End-to-End 구현</div>
         <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px 30px;">
@@ -1061,7 +1089,7 @@
   <div style="position:absolute;left:130px;bottom:52px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="4일차 상세" data-screen-label="22" data-speaker-notes="4일차 세부 시간표. 야간 세션 없음." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(22,48,94,0.10), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="4일차 상세" data-screen-label="21" data-speaker-notes="4일차 세부 시간표. 야간 세션 없음." style="position:relative;overflow:hidden;background:radial-gradient(100% 80% at 0% 0%, rgba(22,48,94,0.10), rgba(0,111,255,0) 55%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.07), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:20px;">
     <div style="background:linear-gradient(150deg, #16305E, #0B1B36);border-radius:14px;padding:12px 22px;font-size:24px;font-weight:800;color:#fff;">DAY 4</div>
@@ -1080,7 +1108,7 @@
         <div style="margin-top:16px;font-size:32px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">[품질 검증] ⑤ 테스트 &amp; 마무리</div>
         <div style="margin-top:12px;font-size:23px;font-weight:500;color:#7A7A82;line-height:1.55;">시연 시나리오대로 처음부터 끝까지 테스트 · 버그 수정과 UI 폴리싱 · 에지 케이스 안내 메시지 추가</div>
       </div>
-      <div style="background:#fff;border:2px solid #16305E;border-radius:18px;padding:32px 36px;box-shadow:0 12px 32px rgba(22,48,94,0.14);">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:32px 36px;box-shadow:0 10px 26px rgba(16,32,64,0.05);">
         <div style="display:flex;align-items:center;gap:20px;"><div style="font-size:26px;font-weight:800;color:#16305E;">10:30 ~ 12:00</div><div style="font-size:17px;font-weight:700;color:#fff;background:#16305E;border-radius:6px;padding:4px 10px;">산출물</div></div>
         <div style="margin-top:16px;font-size:32px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">[가치 정리] 발표 준비</div>
         <div style="margin-top:12px;font-size:23px;font-weight:500;color:#7A7A82;line-height:1.55;">최종 제출 양식 작성 (배경·목표·추진과정·기대효과) · 발표자료 구성 · 리허설과 역할 분담</div>
@@ -1114,7 +1142,7 @@
   <div style="position:absolute;left:130px;bottom:52px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="야간 미니과제" data-screen-label="23" data-speaker-notes="야간 세션 운영 방식. 3일간 누적된다." style="position:relative;overflow:hidden;background:radial-gradient(85% 80% at 12% 15%, rgba(0,111,255,0.26), rgba(0,111,255,0) 60%), radial-gradient(70% 70% at 100% 100%, rgba(0,111,255,0.14), rgba(0,111,255,0) 55%), #0E1116;">
+<section class="slide" data-label="야간 미니과제" data-screen-label="22" data-speaker-notes="야간 세션 운영 방식. 3일간 누적된다." style="position:relative;overflow:hidden;background:radial-gradient(85% 80% at 12% 15%, rgba(0,111,255,0.26), rgba(0,111,255,0) 60%), radial-gradient(70% 70% at 100% 100%, rgba(0,111,255,0.14), rgba(0,111,255,0) 55%), #0E1116;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
   <div style="position:absolute;left:130px;top:120px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#4D9BFF;"></div>
@@ -1163,7 +1191,7 @@
   <div style="position:absolute;left:130px;bottom:52px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="간지 04" data-screen-label="24" data-speaker-notes="합숙 생활 안내로 전환." style="position:relative;overflow:hidden;background:radial-gradient(85% 80% at 12% 15%, rgba(0,111,255,0.28), rgba(0,111,255,0) 60%), radial-gradient(70% 70% at 100% 100%, rgba(0,111,255,0.16), rgba(0,111,255,0) 55%), #0E1116;">
+<section class="slide" data-label="간지 04" data-screen-label="23" data-speaker-notes="합숙 생활 안내로 전환." style="position:relative;overflow:hidden;background:radial-gradient(85% 80% at 12% 15%, rgba(0,111,255,0.28), rgba(0,111,255,0) 60%), radial-gradient(70% 70% at 100% 100%, rgba(0,111,255,0.16), rgba(0,111,255,0) 55%), #0E1116;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
   <div style="position:absolute;right:120px;top:220px;width:420px;height:420px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.45), rgba(0,111,255,0.08));display:flex;align-items:center;justify-content:center;font-size:150px;font-weight:800;color:rgba(255,255,255,0.9);">04</div>
   <div style="position:absolute;left:130px;top:330px;font-size:26px;font-weight:600;color:#4D9BFF;letter-spacing:0.06em;">BLOCK 04 · CAMPUS LIFE</div>
@@ -1177,45 +1205,7 @@
   <div style="position:absolute;right:130px;bottom:110px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="연수소 소개" data-screen-label="25" data-speaker-notes="휴먼센터 전경. 층별 주요 시설 위치." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
-    <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">CAMPUS</div>
-  </div>
-  <div style="position:absolute;left:130px;top:152px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">휴먼센터 <span style="color:#006FFF;">한눈에 보기</span></div>
-  <div style="position:absolute;left:132px;top:244px;font-size:26px;font-weight:500;color:#7A7A82;">강의장은 2층 217호, 3박 4일간 숙소와 함께 이용합니다</div>
-
-  <div style="position:absolute;left:130px;top:330px;width:1000px;height:560px;border-radius:22px;overflow:hidden;border:1px solid rgba(26,26,26,0.07);box-shadow:0 18px 44px rgba(16,32,64,0.10);background:#F4F7FC;">
-    <img src="assets/humancenter.png" alt="삼성생명 휴먼센터 전경" style="width:100%;height:100%;object-fit:cover;display:block;" />
-  </div>
-
-  <div style="position:absolute;right:130px;top:330px;width:620px;display:flex;flex-direction:column;gap:18px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:26px 32px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:24px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:16px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:23px;font-weight:800;display:flex;align-items:center;justify-content:center;">5F</div>
-      <div><div style="font-size:29px;font-weight:700;color:#1A1A1A;">매점</div><div style="margin-top:4px;font-size:22px;font-weight:500;color:#8C8C8C;">24시간 무인 운영</div></div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:26px 32px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:24px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:16px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:23px;font-weight:800;display:flex;align-items:center;justify-content:center;">4F</div>
-      <div><div style="font-size:29px;font-weight:700;color:#1A1A1A;">식당</div><div style="margin-top:4px;font-size:22px;font-weight:500;color:#8C8C8C;">아침 · 점심 · 저녁 이용</div></div>
-    </div>
-    <div style="background:#fff;border:2px solid #006FFF;border-radius:18px;padding:26px 32px;box-shadow:0 14px 34px rgba(0,111,255,0.14);display:flex;align-items:center;gap:24px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:16px;background:#006FFF;color:#fff;font-size:23px;font-weight:800;display:flex;align-items:center;justify-content:center;">2F</div>
-      <div><div style="font-size:29px;font-weight:700;color:#1A1A1A;">강의장 217호</div><div style="margin-top:4px;font-size:22px;font-weight:500;color:#006FFF;">본 과정 진행 장소</div></div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:26px 32px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:24px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:16px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:23px;font-weight:800;display:flex;align-items:center;justify-content:center;">1F</div>
-      <div><div style="font-size:29px;font-weight:700;color:#1A1A1A;">카페 · 로비</div><div style="margin-top:4px;font-size:22px;font-weight:500;color:#8C8C8C;">07:30 ~ 18:00</div></div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:26px 32px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:24px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:16px;background:rgba(26,26,26,0.06);color:#5A5A60;font-size:23px;font-weight:800;display:flex;align-items:center;justify-content:center;">B1</div>
-      <div><div style="font-size:29px;font-weight:700;color:#1A1A1A;">편의시설</div><div style="margin-top:4px;font-size:22px;font-weight:500;color:#8C8C8C;">탁구장 · 당구장 · 헬스장</div></div>
-    </div>
-  </div>
-  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
-</section>
-
-<section class="slide" data-label="시설 이용 안내" data-screen-label="26" data-speaker-notes="식당·카페·매점·편의시설 운영시간." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="시설 이용 안내" data-screen-label="24" data-speaker-notes="식당·카페·매점·편의시설 운영시간." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
@@ -1234,7 +1224,7 @@
       <div style="margin-top:26px;display:flex;flex-direction:column;gap:20px;">
         <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:24px;font-weight:600;color:#8C8C8C;">아침</div><div style="font-size:27px;font-weight:700;color:#1A1A1A;">07:00 ~ 08:00</div></div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:24px;font-weight:600;color:#8C8C8C;">점심</div><div style="font-size:27px;font-weight:700;color:#1A1A1A;">12:00 ~ 13:00</div></div>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:24px;font-weight:600;color:#8C8C8C;">저녁</div><div style="font-size:27px;font-weight:700;color:#1A1A1A;">17:30 ~ 18:30</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:24px;font-weight:600;color:#8C8C8C;">저녁</div><div style="font-size:27px;font-weight:700;color:#1A1A1A;">18:00 ~ 19:00</div></div>
       </div>
       <div style="margin-top:auto;font-size:21px;font-weight:600;color:#006FFF;">사원증 지참</div>
     </div>
@@ -1286,78 +1276,79 @@
   </div>
 </section>
 
-<section class="slide" data-label="5대 금지사항" data-screen-label="27" data-speaker-notes="연수소 5대 금지사항. 단호하게 한 번 짚고 넘어간다." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="금지사항 · 안전" data-screen-label="25" data-speaker-notes="5대 금지사항은 단호하게 한 번 짚고 넘어간다. 비상시 대피장소는 가족공원." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;right:-140px;top:80px;width:860px;height:860px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.08), rgba(0,111,255,0.01));"></div>
-  <div style="position:absolute;left:130px;top:110px;display:flex;align-items:center;gap:16px;">
+  <div style="position:absolute;left:130px;top:96px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">HOUSE RULES</div>
+    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">HOUSE RULES · SAFETY</div>
   </div>
-  <div style="position:absolute;left:130px;top:166px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">연수소 <span style="color:#006FFF;">5대 금지사항</span></div>
-  <div style="position:absolute;left:132px;top:258px;font-size:26px;font-weight:500;color:#7A7A82;">이것만은 꼭 지켜주세요</div>
+  <div style="position:absolute;left:130px;top:148px;font-size:58px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">연수소 <span style="color:#006FFF;">생활 안전</span> 안내</div>
+  <div style="position:absolute;left:132px;top:236px;font-size:25px;font-weight:500;color:#7A7A82;">5대 금지사항과 비상시 대피 절차를 확인해 주세요</div>
 
-  <div style="position:absolute;left:130px;right:130px;top:352px;display:flex;flex-direction:column;gap:14px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:24px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;">1</div>
-      <div style="font-size:38px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">무단 <span style="color:#006FFF;font-weight:800;">외출 및 외박</span></div>
+  <div style="position:absolute;left:130px;top:310px;width:800px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="width:8px;height:30px;border-radius:3px;background:#006FFF;"></div>
+      <div style="font-size:32px;font-weight:800;color:#1A1A1A;letter-spacing:-0.02em;">5대 금지사항</div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:24px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;">2</div>
-      <div style="font-size:38px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;"><span style="color:#006FFF;font-weight:800;">음주</span> 및 <span style="color:#006FFF;font-weight:800;">외부 음식물·주류 반입</span></div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:24px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;">3</div>
-      <div style="font-size:38px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;"><span style="color:#006FFF;font-weight:800;">도박</span> 및 <span style="color:#006FFF;font-weight:800;">타인 숙소 출입</span></div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:24px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;">4</div>
-      <div style="font-size:38px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;"><span style="color:#006FFF;font-weight:800;">실내 흡연</span></div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:24px 40px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:32px;">
-      <div style="width:60px;height:60px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;">5</div>
-      <div style="font-size:38px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;">진행자 및 보안요원의 <span style="color:#006FFF;font-weight:800;">정당한 협조요청에 불응</span></div>
+    <div style="margin-top:24px;display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:18px;padding:22px 32px;display:flex;align-items:center;gap:26px;">
+        <div style="width:54px;height:54px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;">1</div>
+        <div style="font-size:29px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.35;">무단 <span style="color:#006FFF;font-weight:800;">외출 및 외박</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:18px;padding:22px 32px;display:flex;align-items:center;gap:26px;">
+        <div style="width:54px;height:54px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;">2</div>
+        <div style="font-size:29px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.35;"><span style="color:#006FFF;font-weight:800;">음주</span> 및 <span style="color:#006FFF;font-weight:800;">외부 음식물·주류 반입</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:18px;padding:22px 32px;display:flex;align-items:center;gap:26px;">
+        <div style="width:54px;height:54px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;">3</div>
+        <div style="font-size:29px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.35;"><span style="color:#006FFF;font-weight:800;">도박</span> 및 <span style="color:#006FFF;font-weight:800;">타인 숙소 출입</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:18px;padding:22px 32px;display:flex;align-items:center;gap:26px;">
+        <div style="width:54px;height:54px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;">4</div>
+        <div style="font-size:29px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.35;"><span style="color:#006FFF;font-weight:800;">실내 흡연</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:18px;padding:22px 32px;display:flex;align-items:center;gap:26px;">
+        <div style="width:54px;height:54px;flex:none;border-radius:50%;background:linear-gradient(150deg, #4D9BFF, #006FFF);color:#fff;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;">5</div>
+        <div style="font-size:29px;font-weight:700;color:#1A1A1A;letter-spacing:-0.02em;line-height:1.35;">진행자·보안요원의 <span style="color:#006FFF;font-weight:800;">정당한 협조요청에 불응</span></div>
+      </div>
     </div>
   </div>
-  <div style="position:absolute;left:130px;bottom:52px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
+
+  <div style="position:absolute;left:990px;top:310px;width:800px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="width:8px;height:30px;border-radius:3px;background:#006FFF;"></div>
+      <div style="font-size:32px;font-weight:800;color:#1A1A1A;letter-spacing:-0.02em;">비상시 대피 안내</div>
+    </div>
+    <div style="margin-top:24px;background:linear-gradient(155deg, #1785FF, #006FFF 55%, #0050BB);border-radius:20px;padding:28px 34px;box-shadow:0 20px 44px rgba(0,111,255,0.26);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <div style="position:absolute;right:-60px;bottom:-70px;width:220px;height:220px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:rgba(255,255,255,0.10);"></div>
+      <div>
+        <div style="font-size:21px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.04em;">비상시 대피장소</div>
+        <div style="margin-top:8px;font-size:48px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1;">가족공원</div>
+      </div>
+      <div style="font-size:21px;font-weight:500;color:rgba(255,255,255,0.9);line-height:1.5;text-align:right;flex:none;">정문을 나와<br />우측 도로를 따라 이동</div>
+    </div>
+    <div style="margin-top:18px;height:300px;border-radius:18px;overflow:hidden;border:1px solid rgba(26,26,26,0.07);box-shadow:0 14px 34px rgba(16,32,64,0.08);background:#F4F7FC;">
+      <img src="assets/evacuation.jpg" alt="비상시 대피장소 안내" style="width:100%;height:100%;object-fit:contain;display:block;" />
+    </div>
+    <div style="margin-top:18px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
+        <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:10px;">
+          <div style="width:40px;height:40px;border-radius:11px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:19px;font-weight:800;display:flex;align-items:center;justify-content:center;">1</div>
+          <div style="font-size:21px;font-weight:600;color:#2B2B31;line-height:1.4;">진행자·보안요원 안내에 따라 이동</div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:10px;">
+          <div style="width:40px;height:40px;border-radius:11px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:19px;font-weight:800;display:flex;align-items:center;justify-content:center;">2</div>
+          <div style="font-size:21px;font-weight:600;color:#2B2B31;line-height:1.4;">엘리베이터 대신 비상계단 이용</div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);box-shadow:0 12px 30px rgba(16,32,64,0.06);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:10px;">
+          <div style="width:40px;height:40px;border-radius:11px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:19px;font-weight:800;display:flex;align-items:center;justify-content:center;">3</div>
+          <div style="font-size:21px;font-weight:600;color:#2B2B31;line-height:1.4;">대피 후 팀별 인원 확인</div>
+        </div>
+    </div>
+  </div>
+  <div style="position:absolute;left:130px;bottom:44px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="안전 안내" data-screen-label="28" data-speaker-notes="비상시 대피장소는 가족공원." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
-    <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">SAFETY</div>
-  </div>
-  <div style="position:absolute;left:130px;top:152px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">비상시 <span style="color:#006FFF;">대피 안내</span></div>
-  <div style="position:absolute;left:132px;top:244px;font-size:26px;font-weight:500;color:#7A7A82;">화재·지진 등 비상 상황 발생 시 아래 절차에 따라 이동해 주세요</div>
-
-  <div style="position:absolute;left:130px;top:340px;width:1040px;height:540px;border-radius:22px;overflow:hidden;border:1px solid rgba(26,26,26,0.07);box-shadow:0 18px 44px rgba(16,32,64,0.10);background:#F4F7FC;">
-    <img src="assets/evacuation.jpg" alt="비상시 대피장소 안내" style="width:100%;height:100%;object-fit:cover;display:block;" />
-  </div>
-
-  <div style="position:absolute;right:130px;top:340px;width:580px;display:flex;flex-direction:column;gap:20px;">
-    <div style="background:linear-gradient(155deg, #1785FF, #006FFF 55%, #0050BB);border-radius:22px;padding:40px 40px;box-shadow:0 22px 48px rgba(0,111,255,0.28);position:relative;overflow:hidden;">
-      <div style="position:absolute;right:-60px;bottom:-70px;width:240px;height:240px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:rgba(255,255,255,0.10);"></div>
-      <div style="font-size:23px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.04em;">비상시 대피장소</div>
-      <div style="margin-top:16px;font-size:60px;font-weight:800;color:#fff;letter-spacing:-0.03em;">가족공원</div>
-      <div style="margin-top:16px;font-size:24px;font-weight:500;color:rgba(255,255,255,0.88);line-height:1.5;">건물 정문을 나와 우측 도로를 따라 이동합니다</div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:28px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:22px;">
-      <div style="width:48px;height:48px;flex:none;border-radius:13px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;">1</div>
-      <div style="font-size:26px;font-weight:600;color:#2B2B31;line-height:1.45;">진행자·보안요원의 안내에 따라 이동</div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:28px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:22px;">
-      <div style="width:48px;height:48px;flex:none;border-radius:13px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;">2</div>
-      <div style="font-size:26px;font-weight:600;color:#2B2B31;line-height:1.45;">엘리베이터 대신 비상계단 이용</div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:18px;padding:28px 34px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:22px;">
-      <div style="width:48px;height:48px;flex:none;border-radius:13px;background:rgba(0,111,255,0.10);color:#006FFF;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;">3</div>
-      <div style="font-size:26px;font-weight:600;color:#2B2B31;line-height:1.45;">대피 후 팀별로 인원 확인</div>
-    </div>
-  </div>
-  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
-</section>
-
-<section class="slide" data-label="교육 에티켓" data-screen-label="29" data-speaker-notes="함께 지킬 네 가지." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="교육 에티켓" data-screen-label="26" data-speaker-notes="함께 지킬 네 가지." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
@@ -1398,7 +1389,7 @@
   </div>
 </section>
 
-<section class="slide" data-label="간지 05" data-screen-label="30" data-speaker-notes="마지막 블록. 운영 안내." style="position:relative;overflow:hidden;background:radial-gradient(85% 80% at 12% 15%, rgba(0,111,255,0.28), rgba(0,111,255,0) 60%), radial-gradient(70% 70% at 100% 100%, rgba(0,111,255,0.16), rgba(0,111,255,0) 55%), #0E1116;">
+<section class="slide" data-label="간지 05" data-screen-label="27" data-speaker-notes="마지막 블록. 운영 안내." style="position:relative;overflow:hidden;background:radial-gradient(85% 80% at 12% 15%, rgba(0,111,255,0.28), rgba(0,111,255,0) 60%), radial-gradient(70% 70% at 100% 100%, rgba(0,111,255,0.16), rgba(0,111,255,0) 55%), #0E1116;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
   <div style="position:absolute;right:120px;top:220px;width:420px;height:420px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.45), rgba(0,111,255,0.08));display:flex;align-items:center;justify-content:center;font-size:150px;font-weight:800;color:rgba(255,255,255,0.9);">05</div>
   <div style="position:absolute;left:130px;top:330px;font-size:26px;font-weight:600;color:#4D9BFF;letter-spacing:0.06em;">BLOCK 05 · OPERATION</div>
@@ -1411,7 +1402,7 @@
   <div style="position:absolute;right:130px;bottom:110px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="사전 준비사항" data-screen-label="31" data-speaker-notes="지금 이 자리에서 함께 세팅. 미완료자는 손을 든다." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="사전 준비사항" data-screen-label="28" data-speaker-notes="지금 이 자리에서 함께 세팅. 미완료자는 손을 든다." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:100px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
@@ -1420,8 +1411,8 @@
   <div style="position:absolute;left:130px;top:152px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">지금 <span style="color:#006FFF;">바로</span> 세팅하겠습니다</div>
   <div style="position:absolute;left:132px;top:245px;font-size:26px;font-weight:500;color:#7A7A82;">세 가지 모두 완료되어야 오후 실습이 가능합니다</div>
 
-  <div style="position:absolute;left:130px;right:130px;top:340px;display:flex;flex-direction:column;gap:24px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:36px 44px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:36px;">
+  <div style="position:absolute;left:130px;right:130px;top:300px;display:flex;flex-direction:column;gap:20px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:28px 44px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:36px;">
       <div style="width:80px;height:80px;flex:none;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #7DBBFF, #22A7F5);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;">01</div>
       <div style="width:330px;"><div style="font-size:36px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">Wi-Fi 연결</div><div style="margin-top:8px;font-size:23px;font-weight:500;color:#8C8C8C;">강의장 전용 네트워크</div></div>
       <div style="flex:1;background:#F5F8FD;border-radius:14px;padding:22px 28px;display:flex;gap:60px;">
@@ -1429,15 +1420,21 @@
         <div><div style="font-size:20px;font-weight:600;color:#8C8C8C;">PW</div><div style="margin-top:6px;font-size:28px;font-weight:700;color:#1A1A1A;">추후 안내</div></div>
       </div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:36px 44px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:36px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:28px 44px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:36px;">
       <div style="width:80px;height:80px;flex:none;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #1785FF, #0050BB);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;">02</div>
-      <div style="width:330px;"><div style="font-size:36px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">AI 교육 플랫폼</div><div style="margin-top:8px;font-size:23px;font-weight:500;color:#8C8C8C;">사번으로 로그인</div></div>
-      <div style="flex:1;background:#F5F8FD;border-radius:14px;padding:22px 28px;">
-        <div style="font-size:20px;font-weight:600;color:#8C8C8C;">접속 주소</div>
-        <div style="margin-top:6px;font-size:30px;font-weight:700;color:#006FFF;">samsunglife.elice.io</div>
+      <div style="width:330px;"><div style="font-size:36px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">AI 교육 플랫폼</div><div style="margin-top:8px;font-size:23px;font-weight:500;color:#8C8C8C;">Knox ID로 로그인</div></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
+        <div style="background:#F5F8FD;border-radius:14px;padding:20px 28px;display:flex;align-items:center;gap:50px;">
+          <div><div style="font-size:20px;font-weight:600;color:#8C8C8C;">접속 주소</div><div style="margin-top:6px;font-size:28px;font-weight:700;color:#006FFF;">samsunglife.elice.io</div></div>
+          <div><div style="font-size:20px;font-weight:600;color:#8C8C8C;">계정</div><div style="margin-top:6px;font-size:24px;font-weight:700;color:#1A1A1A;white-space:nowrap;">Knox ID@samsung.com · 본인 설정 패스워드</div></div>
+        </div>
+        <div style="background:#006FFF;border-radius:14px;padding:20px 28px;display:flex;align-items:center;gap:22px;">
+          <div style="font-size:19px;font-weight:800;color:#006FFF;background:#fff;border-radius:8px;padding:7px 14px;flex:none;">지금 바로!</div>
+          <div style="font-size:24px;font-weight:700;color:#fff;white-space:nowrap;">내 클래스 &gt; 과목 &gt; AI Advanced &gt; &lsquo;사전 성취도 평가&rsquo; 설문 참여</div>
+        </div>
       </div>
     </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:36px 44px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:36px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:28px 44px;box-shadow:0 12px 30px rgba(16,32,64,0.06);display:flex;align-items:center;gap:36px;">
       <div style="width:80px;height:80px;flex:none;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #33333B, #1A1A1A);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;">03</div>
       <div style="width:330px;"><div style="font-size:36px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">Google 계정</div><div style="margin-top:8px;font-size:23px;font-weight:500;color:#8C8C8C;">실습 도구 연동용</div></div>
       <div style="flex:1;background:#F5F8FD;border-radius:14px;padding:22px 28px;">
@@ -1453,7 +1450,89 @@
   </div>
 </section>
 
-<section class="slide" data-label="Wrap-Up 설문" data-screen-label="32" data-speaker-notes="1~3일차 종료 시 반복 사용. 제출 버튼 강조." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+<section class="slide" data-label="문의처" data-screen-label="29" data-speaker-notes="4일간 문의 채널. 야간에도 운영진 상주." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
+  <div style="position:absolute;left:130px;top:120px;display:flex;align-items:center;gap:16px;">
+    <div style="width:44px;height:2px;background:#006FFF;"></div>
+    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">CONTACT</div>
+  </div>
+  <div style="position:absolute;left:130px;top:176px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">막히면 <span style="color:#006FFF;">바로 물어보세요</span></div>
+  <div style="position:absolute;left:132px;top:268px;font-size:26px;font-weight:500;color:#7A7A82;">혼자 붙잡고 있는 시간이 가장 아깝습니다</div>
+
+  <div style="position:absolute;left:130px;right:130px;top:380px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:44px 40px;height:400px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;">
+      <div style="width:80px;height:80px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #7DBBFF, #22A7F5);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;">1</div>
+      <div style="margin-top:30px;font-size:38px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">강사 · 멘토</div>
+      <div style="margin-top:16px;font-size:25px;font-weight:500;color:#7A7A82;line-height:1.55;">기술적 막힘, 코드 오류, 구현 방향 판단</div>
+      <div style="margin-top:auto;font-size:22px;font-weight:600;color:#006FFF;">세션 중 언제든 · 손 들기</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:44px 40px;height:400px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;">
+      <div style="width:80px;height:80px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #1785FF, #0050BB);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;">2</div>
+      <div style="margin-top:30px;font-size:38px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">집중 질의응답</div>
+      <div style="margin-top:16px;font-size:25px;font-weight:500;color:#7A7A82;line-height:1.55;">교육 중 집중 질의응답 시간을 별도로 운영합니다</div>
+      <div style="margin-top:auto;font-size:22px;font-weight:600;color:#006FFF;">2~3일차 11:30 · 17:30</div>
+    </div>
+    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:44px 40px;height:400px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;">
+      <div style="width:80px;height:80px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #33333B, #1A1A1A);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;">3</div>
+      <div style="margin-top:30px;font-size:38px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">운영진</div>
+      <div style="margin-top:16px;font-size:25px;font-weight:500;color:#7A7A82;line-height:1.55;">숙소·시설·출결·건강 등 생활 관련 모든 문의</div>
+      <div style="margin-top:auto;font-size:22px;font-weight:600;color:#5A5A60;">강의장 운영석 · 야간 상주</div>
+    </div>
+  </div>
+  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
+</section>
+
+<section class="slide" data-label="Break Time" data-screen-label="30" data-speaker-notes="쉬는 시간. 복귀 시각만 수정해 반복 사용." style="position:relative;overflow:hidden;background:radial-gradient(90% 80% at 15% 10%, rgba(0,111,255,0.30), rgba(0,111,255,0) 60%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.18), rgba(0,111,255,0) 55%), #0E1116;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
+  <div style="position:absolute;right:-80px;top:-120px;width:700px;height:700px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.30), rgba(0,111,255,0.03));"></div>
+  <div style="position:absolute;left:130px;top:330px;font-size:30px;font-weight:600;color:#4D9BFF;letter-spacing:0.08em;">BREAK TIME</div>
+  <div style="position:absolute;left:126px;top:400px;max-width:1130px;font-size:170px;font-weight:800;color:#fff;letter-spacing:-0.045em;line-height:1;">잠시 <span style="color:#4D9BFF;">쉬어갑니다</span></div>
+  <div style="position:absolute;left:132px;top:660px;font-size:44px;font-weight:600;color:#9BA6B8;">복귀 시각에 맞춰 착석해 주세요</div>
+  <div style="position:absolute;right:130px;top:400px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:24px;padding:44px 60px;text-align:center;">
+    <div style="font-size:24px;font-weight:600;color:#8895AB;letter-spacing:0.06em;">RESTART</div>
+    <div style="margin-top:16px;font-size:110px;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;">00:00</div>
+  </div>
+  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
+</section>
+
+<section class="slide" data-label="야간 세션 전환" data-screen-label="31" data-speaker-notes="저녁 식사 후 야간 세션으로 전환할 때." style="position:relative;overflow:hidden;background:radial-gradient(90% 80% at 15% 10%, rgba(0,111,255,0.28), rgba(0,111,255,0) 60%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.16), rgba(0,111,255,0) 55%), #0E1116;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
+  <div style="position:absolute;right:-80px;bottom:-160px;width:720px;height:720px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.30), rgba(0,111,255,0.03));"></div>
+  <div style="position:absolute;left:130px;top:320px;font-size:30px;font-weight:600;color:#4D9BFF;letter-spacing:0.08em;">DINNER · 18:00 ~ 19:00</div>
+  <div style="position:absolute;left:126px;top:390px;max-width:1120px;font-size:150px;font-weight:800;color:#fff;letter-spacing:-0.045em;line-height:1.05;">저녁 식사 후<br /><span style="color:#4D9BFF;">야간 세션</span></div>
+  <div style="position:absolute;left:132px;top:730px;font-size:40px;font-weight:600;color:#9BA6B8;">4층 식당 · 사원증 지참</div>
+  <div style="position:absolute;right:130px;top:390px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:24px;padding:44px 60px;text-align:center;">
+    <div style="font-size:24px;font-weight:600;color:#8895AB;letter-spacing:0.06em;">RESTART</div>
+    <div style="margin-top:16px;font-size:110px;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;">19:00</div>
+    <div style="margin-top:16px;font-size:23px;font-weight:600;color:#9BA6B8;">미니 과제 세션</div>
+  </div>
+  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
+</section>
+
+<section class="slide" data-label="일차 종료" data-screen-label="32" data-speaker-notes="하루 마무리. 설문 제출 확인 후 퇴실." style="position:relative;overflow:hidden;background:radial-gradient(90% 80% at 15% 10%, rgba(0,111,255,0.30), rgba(0,111,255,0) 60%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.18), rgba(0,111,255,0) 55%), #0E1116;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
+  <div style="position:absolute;right:100px;top:200px;width:520px;height:520px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.40), rgba(0,111,255,0.06));"></div>
+  <div style="position:absolute;left:130px;top:300px;font-size:30px;font-weight:600;color:#4D9BFF;letter-spacing:0.08em;">END OF DAY</div>
+  <div style="position:absolute;left:126px;top:370px;max-width:1180px;font-size:140px;font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.05;">오늘도 <span style="color:#4D9BFF;">수고하셨습니다</span></div>
+  <div style="position:absolute;left:132px;top:640px;font-size:38px;font-weight:600;color:#9BA6B8;">내일 09:00, 같은 자리에서 뵙겠습니다</div>
+  <div style="position:absolute;left:130px;bottom:150px;display:flex;gap:20px;">
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:26px 34px;font-size:28px;font-weight:600;color:#fff;">★ 설문 제출 완료</div>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:26px 34px;font-size:28px;font-weight:600;color:#fff;">★ 미니 과제 제출</div>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:26px 34px;font-size:28px;font-weight:600;color:#fff;">★ 자리 정리</div>
+  </div>
+  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
+</section>
+
+<section class="slide" data-label="시작" data-screen-label="33" data-speaker-notes="OT 종료, 본 교육으로 전환." style="position:relative;overflow:hidden;background:radial-gradient(110% 85% at 8% 0%, rgba(0,111,255,0.14), rgba(0,111,255,0) 58%), radial-gradient(85% 80% at 100% 100%, rgba(0,111,255,0.10), rgba(0,111,255,0) 55%), #FBFCFE;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
+  <div style="position:absolute;right:120px;top:280px;width:520px;height:520px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #4D9BFF, #006FFF 55%, #0053C0);box-shadow:0 40px 90px rgba(0,111,255,0.28);display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:800;color:#fff;letter-spacing:-0.02em;">START</div>
+  <div style="position:absolute;left:130px;top:340px;font-size:26px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">LET'S BUILD</div>
+  <div style="position:absolute;left:126px;top:400px;font-size:120px;font-weight:800;color:#1A1A1A;letter-spacing:-0.04em;line-height:1.1;">이제,<br />만들어 봅시다</div>
+  <div style="position:absolute;left:132px;top:730px;font-size:34px;font-weight:500;color:#5A5A60;">첫 세션 · AI 트렌드와 Claude 기초 (10:00 ~ 11:00)</div>
+  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
+</section>
+
+<section class="slide" data-label="Wrap-Up 설문" data-screen-label="34" data-speaker-notes="1~3일차 종료 시 반복 사용. 제출 버튼 강조." style="position:relative;overflow:hidden;background:radial-gradient(105% 85% at 8% 0%, rgba(0,111,255,0.12), rgba(0,111,255,0) 58%), radial-gradient(85% 75% at 100% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
   <div style="position:absolute;left:130px;top:130px;display:flex;align-items:center;gap:16px;">
     <div style="width:44px;height:2px;background:#006FFF;"></div>
@@ -1476,87 +1555,15 @@
   <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
 </section>
 
-<section class="slide" data-label="문의처" data-screen-label="33" data-speaker-notes="4일간 문의 채널. 야간에도 운영진 상주." style="position:relative;overflow:hidden;background:radial-gradient(95% 75% at 100% 0%, rgba(0,111,255,0.11), rgba(0,111,255,0) 55%), radial-gradient(85% 75% at 0% 100%, rgba(0,111,255,0.08), rgba(0,111,255,0) 55%), #FBFCFE;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;left:130px;top:120px;display:flex;align-items:center;gap:16px;">
-    <div style="width:44px;height:2px;background:#006FFF;"></div>
-    <div style="font-size:24px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">CONTACT</div>
-  </div>
-  <div style="position:absolute;left:130px;top:176px;font-size:60px;font-weight:800;color:#1A1A1A;letter-spacing:-0.03em;">막히면 <span style="color:#006FFF;">바로 물어보세요</span></div>
-  <div style="position:absolute;left:132px;top:268px;font-size:26px;font-weight:500;color:#7A7A82;">혼자 붙잡고 있는 시간이 가장 아깝습니다</div>
 
-  <div style="position:absolute;left:130px;right:130px;top:380px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:44px 40px;height:400px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;">
-      <div style="width:80px;height:80px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #7DBBFF, #22A7F5);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;">1</div>
-      <div style="margin-top:30px;font-size:38px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">강사 · 조교</div>
-      <div style="margin-top:16px;font-size:25px;font-weight:500;color:#7A7A82;line-height:1.55;">기술적 막힘, 코드 오류, 구현 방향 판단</div>
-      <div style="margin-top:auto;font-size:22px;font-weight:600;color:#006FFF;">세션 중 언제든 · 손 들기</div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:44px 40px;height:400px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;">
-      <div style="width:80px;height:80px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #1785FF, #0050BB);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;">2</div>
-      <div style="margin-top:30px;font-size:38px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">공통 Q&amp;A</div>
-      <div style="margin-top:16px;font-size:25px;font-weight:500;color:#7A7A82;line-height:1.55;">여러 팀이 겪는 공통 이슈는 모아서 전체 답변</div>
-      <div style="margin-top:auto;font-size:22px;font-weight:600;color:#006FFF;">2~3일차 11:30 · 17:30</div>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:44px 40px;height:400px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;">
-      <div style="width:80px;height:80px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #33333B, #1A1A1A);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;">3</div>
-      <div style="margin-top:30px;font-size:38px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">운영진</div>
-      <div style="margin-top:16px;font-size:25px;font-weight:500;color:#7A7A82;line-height:1.55;">숙소·시설·출결·건강 등 생활 관련 모든 문의</div>
-      <div style="margin-top:auto;font-size:22px;font-weight:600;color:#5A5A60;">강의장 운영석 · 야간 상주</div>
-    </div>
-  </div>
-  <div style="position:absolute;left:130px;bottom:56px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
-</section>
 
-<section class="slide" data-label="Break Time" data-screen-label="34" data-speaker-notes="쉬는 시간. 복귀 시각만 수정해 반복 사용." style="position:relative;overflow:hidden;background:radial-gradient(90% 80% at 15% 10%, rgba(0,111,255,0.30), rgba(0,111,255,0) 60%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.18), rgba(0,111,255,0) 55%), #0E1116;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
-  <div style="position:absolute;right:-80px;top:-120px;width:700px;height:700px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.30), rgba(0,111,255,0.03));"></div>
-  <div style="position:absolute;left:130px;top:330px;font-size:30px;font-weight:600;color:#4D9BFF;letter-spacing:0.08em;">BREAK TIME</div>
-  <div style="position:absolute;left:126px;top:400px;max-width:1130px;font-size:170px;font-weight:800;color:#fff;letter-spacing:-0.045em;line-height:1;">잠시 <span style="color:#4D9BFF;">쉬어갑니다</span></div>
-  <div style="position:absolute;left:132px;top:660px;font-size:44px;font-weight:600;color:#9BA6B8;">복귀 시각에 맞춰 착석해 주세요</div>
-  <div style="position:absolute;right:130px;top:400px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:24px;padding:44px 60px;text-align:center;">
-    <div style="font-size:24px;font-weight:600;color:#8895AB;letter-spacing:0.06em;">RESTART</div>
-    <div style="margin-top:16px;font-size:110px;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;">00:00</div>
-  </div>
-  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
-</section>
 
-<section class="slide" data-label="야간 세션 전환" data-screen-label="35" data-speaker-notes="저녁 식사 후 야간 세션으로 전환할 때." style="position:relative;overflow:hidden;background:radial-gradient(90% 80% at 15% 10%, rgba(0,111,255,0.28), rgba(0,111,255,0) 60%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.16), rgba(0,111,255,0) 55%), #0E1116;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
-  <div style="position:absolute;right:-80px;bottom:-160px;width:720px;height:720px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.30), rgba(0,111,255,0.03));"></div>
-  <div style="position:absolute;left:130px;top:320px;font-size:30px;font-weight:600;color:#4D9BFF;letter-spacing:0.08em;">DINNER · 17:30 ~ 18:30</div>
-  <div style="position:absolute;left:126px;top:390px;max-width:1120px;font-size:150px;font-weight:800;color:#fff;letter-spacing:-0.045em;line-height:1.05;">저녁 식사 후<br /><span style="color:#4D9BFF;">야간 세션</span></div>
-  <div style="position:absolute;left:132px;top:730px;font-size:40px;font-weight:600;color:#9BA6B8;">4층 식당 · 사원증 지참</div>
-  <div style="position:absolute;right:130px;top:390px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:24px;padding:44px 60px;text-align:center;">
-    <div style="font-size:24px;font-weight:600;color:#8895AB;letter-spacing:0.06em;">RESTART</div>
-    <div style="margin-top:16px;font-size:110px;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;">19:00</div>
-    <div style="margin-top:16px;font-size:23px;font-weight:600;color:#9BA6B8;">미니 과제 세션</div>
-  </div>
-  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
-</section>
 
-<section class="slide" data-label="일차 종료" data-screen-label="36" data-speaker-notes="하루 마무리. 설문 제출 확인 후 퇴실." style="position:relative;overflow:hidden;background:radial-gradient(90% 80% at 15% 10%, rgba(0,111,255,0.30), rgba(0,111,255,0) 60%), radial-gradient(80% 70% at 100% 100%, rgba(0,111,255,0.18), rgba(0,111,255,0) 55%), #0E1116;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(255,255,255,0.09) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.6;"></div>
-  <div style="position:absolute;right:100px;top:200px;width:520px;height:520px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, rgba(0,111,255,0.40), rgba(0,111,255,0.06));"></div>
-  <div style="position:absolute;left:130px;top:300px;font-size:30px;font-weight:600;color:#4D9BFF;letter-spacing:0.08em;">END OF DAY</div>
-  <div style="position:absolute;left:126px;top:370px;max-width:1180px;font-size:140px;font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.05;">오늘도 <span style="color:#4D9BFF;">수고하셨습니다</span></div>
-  <div style="position:absolute;left:132px;top:640px;font-size:38px;font-weight:600;color:#9BA6B8;">내일 09:00, 같은 자리에서 뵙겠습니다</div>
-  <div style="position:absolute;left:130px;bottom:150px;display:flex;gap:20px;">
-    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:26px 34px;font-size:28px;font-weight:600;color:#fff;">★ 설문 제출 완료</div>
-    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:26px 34px;font-size:28px;font-weight:600;color:#fff;">★ 미니 과제 제출</div>
-    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:26px 34px;font-size:28px;font-weight:600;color:#fff;">★ 자리 정리</div>
-  </div>
-  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#5C6577;">'26년 AI Advanced 과정</div>
-</section>
 
-<section class="slide" data-label="시작" data-screen-label="37" data-speaker-notes="OT 종료, 본 교육으로 전환." style="position:relative;overflow:hidden;background:radial-gradient(110% 85% at 8% 0%, rgba(0,111,255,0.14), rgba(0,111,255,0) 58%), radial-gradient(85% 80% at 100% 100%, rgba(0,111,255,0.10), rgba(0,111,255,0) 55%), #FBFCFE;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle, rgba(26,26,26,0.10) 1.1px, transparent 1.1px);background-size:26px 26px;opacity:0.5;"></div>
-  <div style="position:absolute;right:120px;top:280px;width:520px;height:520px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #4D9BFF, #006FFF 55%, #0053C0);box-shadow:0 40px 90px rgba(0,111,255,0.28);display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:800;color:#fff;letter-spacing:-0.02em;">START</div>
-  <div style="position:absolute;left:130px;top:340px;font-size:26px;font-weight:600;color:#006FFF;letter-spacing:0.06em;">LET'S BUILD</div>
-  <div style="position:absolute;left:126px;top:400px;font-size:120px;font-weight:800;color:#1A1A1A;letter-spacing:-0.04em;line-height:1.1;">이제,<br />만들어 봅시다</div>
-  <div style="position:absolute;left:132px;top:730px;font-size:34px;font-weight:500;color:#5A5A60;">첫 세션 · AI 트렌드와 Claude 기초 (10:00 ~ 11:00)</div>
-  <div style="position:absolute;left:130px;bottom:70px;font-size:20px;font-weight:500;color:#9A9AA2;">'26년 AI Advanced 과정</div>
-</section>
+
+
+
+
   </div>
 </div>
 
