@@ -3,16 +3,17 @@
 발표용 슬라이드 덱입니다. 빌드 과정 없이 브라우저에서 바로 열립니다.
 
 ```
-index.html          전체 31장이 들어있는 단일 파일
-assets/
-  evacuation.jpg    22p 비상시 대피장소 안내도
+index.html          전체 31장 + 이미지까지 들어있는 완전 단독 파일
+assets/             원본 보관용 (index.html은 참조하지 않음)
+  evacuation.jpg    22p 비상시 대피장소 안내도 — HTML에 base64로 삽입되어 있음
   humancenter.png   현재 미사용 (휴먼센터 전경 — 해당 장표 삭제됨, 보관용)
 ```
 
 ## 여는 방법
 
 `index.html`을 브라우저로 열면 됩니다. 서버나 설치 과정이 필요 없습니다.
-**`index.html`과 `assets/` 폴더는 반드시 같은 위치에 함께 두세요** — 이미지는 상대경로로 참조합니다.
+**이 파일 하나만 있으면 됩니다** — 이미지가 HTML 안에 base64로 들어 있어 `assets/` 폴더 없이도 그대로 보입니다.
+메일로 보내거나 USB로 옮길 때도 `index.html`만 챙기면 됩니다.
 
 | 조작 | 키 |
 |---|---|
@@ -45,6 +46,9 @@ data-speaker-notes="..."      ← N 키로 뜨는 발표자 노트
   특정 문구를 반드시 한 줄에 넣어야 하면 `white-space:nowrap` + 자간(`letter-spacing`) 조절을 씁니다.
 - 카드에 `height`가 고정된 경우 글자를 늘리면 아래로 넘칠 수 있습니다.
   수정 후에는 브라우저에서 해당 장표를 눈으로 한 번 확인하세요.
+- 이미지를 새로 넣을 때는 반드시 **base64 data URI로 삽입**하세요.
+  `assets/`를 상대경로로 참조하면 HTML만 따로 열었을 때 엑박이 뜹니다.
+  변환: `python3 -c "import base64;print('data:image/jpeg;base64,'+base64.b64encode(open('파일.jpg','rb').read()).decode())"`
 
 색상 팔레트: `#006FFF`(메인) · `#22A7F5`(1일차) · `#0050BB`(2~3일차) · `#16305E`(4일차) · `#0E1116`(어두운 장표)
 
