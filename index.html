@@ -1480,7 +1480,12 @@
     stage.style.transform = 'scale(' + scale + ')';
   }
   window.addEventListener('resize', fitStage);
-  document.addEventListener('fullscreenchange', fitStage);
+  document.addEventListener('fullscreenchange', function () {
+    fitStage();
+    closeJump();                 // 열려 있으면 리모컨 키가 검색창에 들어가므로 닫는다
+    if (document.body) document.body.focus();
+    resetIdle();
+  });
   fitStage();
 
   function show(i) {
@@ -1524,6 +1529,12 @@
         e.preventDefault(); show(cur - 1); break;
       case 'g': case 'G':
         e.preventDefault(); toggleJump(); break;
+      case 'F5':
+        // 프레젠터 리모컨의 '발표 시작' 버튼이 F5를 보내는 경우가 많다.
+        // 그대로 두면 발표 중 페이지가 새로고침되므로 전체화면 진입으로 돌린다.
+        e.preventDefault();
+        if (!document.fullscreenElement) btnFs.click();
+        break;
       case 'Escape':
         closeJump(); break;
       case 'Home':
