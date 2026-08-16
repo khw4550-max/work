@@ -20,6 +20,7 @@
   #stage {
     width:1920px; height:1080px;
     position:relative; flex:none;
+    -webkit-user-select:none; user-select:none;
     box-shadow: 0 30px 90px rgba(0,0,0,0.5);
   }
   .slide {
@@ -71,6 +72,45 @@
   #nav .counter b { color:#fff; font-weight:700; }
   #nav .sep { width:1px; height:22px; background:rgba(255,255,255,0.12); margin:0 4px; }
 
+  #nav .counter.jumpable { cursor:pointer; border-radius:999px; padding:6px 12px; }
+  #nav .counter.jumpable:hover { background:rgba(255,255,255,0.12); color:#fff; }
+
+  #jump {
+    position:fixed; left:50%; bottom:86px; transform:translateX(-50%);
+    width:min(88vw, 620px);
+    background:rgba(14,17,22,0.94); backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border:1px solid rgba(255,255,255,0.10);
+    border-radius:16px; padding:14px;
+    box-shadow:0 12px 34px rgba(0,0,0,0.4);
+    z-index:1002; display:none;
+  }
+  #jump.show { display:block; }
+  #jump input {
+    width:100%; box-sizing:border-box;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.12); border-radius:10px;
+    padding:10px 14px; color:#fff; font-size:15px; font-family:inherit; outline:none;
+  }
+  #jump input::placeholder { color:#79839A; }
+  #jump input:focus { border-color:#006FFF; }
+  #jump-list {
+    margin-top:10px; max-height:330px; overflow-y:auto;
+    display:grid; grid-template-columns:1fr 1fr; gap:3px;
+  }
+  #jump-list button {
+    -webkit-appearance:none; appearance:none; border:none; cursor:pointer;
+    width:100%; text-align:left; background:transparent; color:#C6CDD9;
+    font-size:14px; font-family:inherit; padding:8px 12px; border-radius:8px;
+    display:flex; gap:10px; align-items:baseline;
+    white-space:nowrap; overflow:hidden;
+  }
+  #jump-list button:hover { background:rgba(255,255,255,0.12); color:#fff; }
+  #jump-list button.current { background:#006FFF; color:#fff; }
+  #jump-list button i { font-style:normal; color:#79839A; min-width:24px; text-align:right; flex:none; }
+  #jump-list button.current i { color:rgba(255,255,255,0.85); }
+  #jump-list button span { overflow:hidden; text-overflow:ellipsis; }
+
   #notes-panel {
     position:fixed; left:50%; bottom:86px; transform:translateX(-50%);
     max-width:900px; width:min(86vw, 900px);
@@ -89,7 +129,7 @@
   }
 
   @media print {
-    #nav, #notes-panel, #progress { display:none !important; }
+    #nav, #notes-panel, #progress, #jump { display:none !important; }
   }
 </style>
 </head>
@@ -1211,8 +1251,8 @@
     <div style="background:#fff;border:1px solid rgba(26,26,26,0.07);border-radius:20px;padding:40px 34px;min-height:440px;box-shadow:0 14px 34px rgba(16,32,64,0.07);display:flex;flex-direction:column;">
       <div style="width:80px;height:80px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(150deg, #33333B, #1A1A1A);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:#fff;">04</div>
       <div style="margin-top:28px;font-size:36px;font-weight:800;color:#1A1A1A;letter-spacing:-0.025em;">정보 보안</div>
-      <div style="margin-top:16px;font-size:24px;font-weight:500;color:#7A7A82;line-height:1.55;">실습 중 민감정보를 AI에 입력하지 않습니다. 교육 종료 후에는 복호화 자료들을 즉시 폐기합니다.</div>
-      <div style="margin-top:auto;font-size:20px;font-weight:600;color:#5A5A60;">2일차 내부가이드에서 상세 안내</div>
+      <div style="margin-top:16px;font-size:24px;font-weight:500;color:#7A7A82;line-height:1.55;">실습 중 민감정보를 AI에 입력하지 않습니다. 복호화된 자료는 교육기간에만 사용합니다.</div>
+      <div style="margin-top:auto;padding-top:18px;font-size:20px;font-weight:600;color:#006FFF;">교육 종료 후 자료 즉시 폐기</div>
     </div>
   </div>
 
@@ -1397,12 +1437,14 @@
   </div>
 </div>
 
+<div id="jump"><input id="jump-input" type="text" inputmode="numeric" autocomplete="off" placeholder="페이지 번호 또는 장표 이름 입력 후 Enter" /><div id="jump-list"></div></div>
+
 <div id="notes-panel"><div class="label">Speaker Notes</div><div id="notes-text"></div></div>
 
 <div id="nav">
   <button id="btn-first" title="처음으로 (Home)">⏮</button>
   <button id="btn-prev" title="이전 (←)">◀</button>
-  <div class="counter"><b id="cur">1</b> / <span id="total"></span> · <span id="label"></span></div>
+  <div class="counter jumpable" id="counter" title="페이지 목록 열기 (G)"><b id="cur">1</b> / <span id="total"></span> · <span id="label"></span></div>
   <button id="btn-next" title="다음 (→ / Space)">▶</button>
   <button id="btn-last" title="마지막으로 (End)">⏭</button>
   <div class="sep"></div>
@@ -1453,6 +1495,7 @@
     elProgress.style.width = ((cur + 1) / total * 100) + '%';
     elNotesText.textContent = slides[cur].getAttribute('data-speaker-notes') || '(노트 없음)';
     history.replaceState(null, '', '#' + (cur + 1));
+    if (typeof markJump === 'function') markJump();
   }
 
   btnPrev.onclick = function () { show(cur - 1); };
@@ -1475,10 +1518,14 @@
 
   window.addEventListener('keydown', function (e) {
     switch (e.key) {
-      case 'ArrowRight': case 'PageDown': case ' ':
+      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ': case 'Enter':
         e.preventDefault(); show(cur + 1); break;
-      case 'ArrowLeft': case 'PageUp':
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': case 'Backspace':
         e.preventDefault(); show(cur - 1); break;
+      case 'g': case 'G':
+        e.preventDefault(); toggleJump(); break;
+      case 'Escape':
+        closeJump(); break;
       case 'Home':
         e.preventDefault(); show(0); break;
       case 'End':
@@ -1506,6 +1553,92 @@
   elNav.addEventListener('mouseenter', function () { clearTimeout(idleTimer); elNav.classList.remove('hidden'); });
   elNav.addEventListener('mouseleave', resetIdle);
   resetIdle();
+
+  // ── 페이지 목록 (원하는 장표로 바로 이동) ──────────────────────────
+  var elJump = document.getElementById('jump');
+  var elJumpInput = document.getElementById('jump-input');
+  var elJumpList = document.getElementById('jump-list');
+
+  slides.forEach(function (s, i) {
+    var btn = document.createElement('button');
+    var num = document.createElement('i');
+    var name = document.createElement('span');
+    num.textContent = i + 1;
+    name.textContent = s.getAttribute('data-label') || '';
+    btn.appendChild(num); btn.appendChild(name);
+    btn.onclick = function () { show(i); closeJump(); };
+    elJumpList.appendChild(btn);
+  });
+
+  function markJump() {
+    for (var i = 0; i < elJumpList.children.length; i++) {
+      elJumpList.children[i].classList.toggle('current', i === cur);
+    }
+  }
+  function filterJump() {
+    var q = elJumpInput.value.trim().toLowerCase(), first = -1;
+    for (var i = 0; i < elJumpList.children.length; i++) {
+      var hay = (i + 1) + ' ' + (slides[i].getAttribute('data-label') || '').toLowerCase();
+      var hit = !q || hay.indexOf(q) !== -1;
+      elJumpList.children[i].style.display = hit ? '' : 'none';
+      if (hit && first < 0) first = i;
+    }
+    return first;
+  }
+  function openJump() {
+    elJump.classList.add('show');
+    elJumpInput.value = '';
+    filterJump(); markJump();
+    var c = elJumpList.children[cur];
+    if (c) elJumpList.scrollTop = Math.max(0, c.offsetTop - 100);
+    elJumpInput.focus();
+    clearTimeout(idleTimer); elNav.classList.remove('hidden');
+  }
+  function closeJump() {
+    if (!elJump.classList.contains('show')) return;
+    elJump.classList.remove('show'); elJumpInput.blur(); resetIdle();
+  }
+  function toggleJump() { elJump.classList.contains('show') ? closeJump() : openJump(); }
+
+  document.getElementById('counter').onclick = toggleJump;
+  elJumpInput.addEventListener('input', filterJump);
+  elJumpInput.addEventListener('keydown', function (e) {
+    e.stopPropagation();                      // 전역 단축키가 가로채지 않도록
+    if (e.key === 'Enter') { var f = filterJump(); if (f >= 0) { show(f); closeJump(); } }
+    else if (e.key === 'Escape') closeJump();
+  });
+
+  // ── 화면 클릭 / 휠 / 리모컨으로 넘기기 ────────────────────────────
+  function inUI(e) {
+    return e.target && e.target.closest && e.target.closest('#nav, #notes-panel, #jump');
+  }
+  document.addEventListener('click', function (e) {
+    if (inUI(e)) return;
+    if (elJump.classList.contains('show')) { closeJump(); return; }
+    show(cur + 1); resetIdle();
+  });
+  document.addEventListener('contextmenu', function (e) {
+    if (inUI(e)) return;
+    e.preventDefault();
+    if (elJump.classList.contains('show')) { closeJump(); return; }
+    show(cur - 1); resetIdle();
+  });
+
+  var wheelAt = 0;
+  window.addEventListener('wheel', function (e) {
+    if (e.target && e.target.closest && e.target.closest('#jump, #notes-panel')) return;
+    var d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    if (Math.abs(d) < 8) return;              // 미세한 트랙패드 흔들림 무시
+    var now = Date.now();
+    if (now - wheelAt < 420) return;          // 관성 스크롤로 여러 장 넘어가는 것 방지
+    wheelAt = now;
+    show(cur + (d > 0 ? 1 : -1)); resetIdle();
+  }, { passive: true });
+
+  // 버튼 클릭 후 포커스를 놓아 Space/Enter가 그 버튼을 다시 누르지 않도록
+  Array.prototype.forEach.call(elNav.querySelectorAll('button'), function (btn) {
+    btn.addEventListener('click', function () { btn.blur(); });
+  });
 
   var startHash = parseInt((location.hash || '').replace('#', ''), 10);
   var start = (startHash >= 1 && startHash <= total) ? startHash - 1 : 0;
