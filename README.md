@@ -53,6 +53,12 @@ USB 리모컨은 키보드로 인식되어 따로 설정 없이 동작합니다.
 폰트(Pretendard)는 CDN에서 불러옵니다. 오프라인이면 시스템 한글 폰트로 대체되어
 보이긴 하지만 자간·굵기가 조금 달라집니다.
 
+1p 부제의 손글씨체(`HandKR` = Nanum Pen Script)는 **쓰이는 글자만 추려 HTML에
+내장**했습니다(7KB). 네트워크가 없어도 그대로 나옵니다. 다만 서브셋이라
+**이 문구의 글자만** 들어 있으니, 손글씨체로 다른 문구를 쓰려면 폰트를 다시 받아야 합니다:
+`curl "https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&text=<쓸글자>"` 로
+woff2 주소를 얻어 base64로 교체하세요.
+
 ## 장표 수정 방법
 
 각 장표는 `<section class="slide" data-label="...">` 한 블록입니다.
