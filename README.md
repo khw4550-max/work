@@ -82,6 +82,10 @@ data-speaker-notes="..."      ← N 키로 뜨는 발표자 노트
 - **큰 제목은 줄이 늘어나면 아래 문구를 덮습니다.** 좌표가 절대값이라 밀려나지 않기 때문입니다.
   제목을 고쳤으면 겹침 여부를 반드시 눈으로 확인하고, 한 줄로 둘 제목에는
   `white-space:nowrap`을, 두 줄로 쓸 제목에는 `<br />`을 명시하세요.
+- **인라인 스타일에 `position`을 두 번 쓰지 마세요.** 뒤에 온 선언이 이깁니다.
+  장식용 도형을 담으려고 `position:relative`를 덧붙이면 앞의 `position:absolute`가
+  무효가 되어 좌표가 통째로 어긋납니다. `absolute` 자체가 이미 기준점이 되므로
+  `relative`는 붙일 필요가 없습니다.
 - 이미지를 새로 넣을 때는 반드시 **base64 data URI로 삽입**하세요.
   `assets/`를 상대경로로 참조하면 HTML만 따로 열었을 때 엑박이 뜹니다.
   변환: `python3 -c "import base64;print('data:image/jpeg;base64,'+base64.b64encode(open('파일.jpg','rb').read()).decode())"`
