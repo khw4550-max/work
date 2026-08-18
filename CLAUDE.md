@@ -94,6 +94,16 @@
 - 폰트·이미지가 CDN에 있으면 현장 네트워크에서 깨진다. **손글씨 등 장식 폰트는
   쓰는 글자만 서브셋해서 내장**하면 7KB 수준이다:
   `curl "https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&text=<글자들>"`
+- **본문 폰트도 결국 내장하게 된다.** "메일로 보내서 다른 노트북에서 열어도 되냐"는
+  질문이 반드시 온다. 본문용 한글 가변 폰트는 KS X 1001 상용 2,350자로 서브셋하면
+  440KB 정도 — 쓰는 글자만 담으면 127KB지만, 이 사용자는 문구를 계속 고치므로
+  **상용 한글 전체를 넣어야 나중에 글자가 깨지지 않는다.**
+  `npm pack pretendard@1.3.9`(CDN이 막혀 있어도 npm은 열려 있다) →
+  `pyftsubset ...VariableTTF --text-file=... --flavor=woff2 --layout-features='*'`
+  가변축(wght 45~920)은 서브셋 후에도 유지된다.
+- **자체 완결성은 눈으로 말고 검사로 확인한다.** Playwright에서 `file:` 이외의 모든
+  요청을 `abort`시키고 `document.fonts.ready` + `naturalWidth`를 찍으면
+  "외부 요청 0건 / 폰트 loaded / 이미지 정상"이 한 번에 나온다.
 
 ## 6. 차트를 넣을 때
 
