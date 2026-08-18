@@ -130,8 +130,39 @@
     color:#4D9BFF; margin-bottom:6px; text-transform:uppercase;
   }
 
+  /* ── 모바일 ── */
+  body { touch-action: manipulation; -webkit-text-size-adjust:100%; }
+
+  #rotate {
+    position:fixed; inset:0; z-index:1003; display:none;
+    background:#0E1116; color:#DCE1EA;
+    flex-direction:column; align-items:center; justify-content:center;
+    gap:20px; text-align:center; padding:40px;
+    font-size:19px; line-height:1.6;
+  }
+  #rotate.show { display:flex; }
+  #rotate .ico { font-size:56px; line-height:1; }
+  #rotate .sub { font-size:15px; color:#8895AB; }
+  #rotate button {
+    -webkit-appearance:none; appearance:none; border:1px solid rgba(255,255,255,0.22);
+    background:rgba(255,255,255,0.08); color:#DCE1EA; cursor:pointer;
+    border-radius:999px; padding:12px 26px; font-size:15px; font-family:inherit;
+  }
+
+  @media (max-width: 760px) {
+    #nav { gap:2px; padding:6px 8px; bottom:14px; max-width:96vw; }
+    #nav button { width:36px; height:36px; font-size:15px; }
+    #nav .counter { min-width:0; max-width:34vw; font-size:12px; padding:0 6px; }
+    #nav .sep { margin:0 2px; }
+    #jump { width:94vw; bottom:64px; padding:12px; }
+    #jump-list { grid-template-columns:1fr; max-height:44vh; }
+    #jump-list button { font-size:15px; padding:10px 12px; }
+    #jump input { font-size:16px; }
+    #notes-panel { width:94vw; bottom:64px; font-size:14px; padding:14px 18px; }
+  }
+
   @media print {
-    #nav, #notes-panel, #progress, #jump { display:none !important; }
+    #nav, #notes-panel, #progress, #jump, #rotate { display:none !important; }
   }
 </style>
 </head>
@@ -1828,6 +1859,13 @@
   </div>
 </div>
 
+<div id="rotate">
+  <div class="ico">📱↻</div>
+  <div>화면을 <b>가로로</b> 돌려주세요<br />슬라이드가 16:9라 가로에서 훨씬 크게 보입니다</div>
+  <button id="rotate-skip">이대로 볼게요</button>
+  <div class="sub">좌우로 밀어서 넘길 수 있습니다</div>
+</div>
+
 <div id="jump"><input id="jump-input" type="text" inputmode="numeric" autocomplete="off" placeholder="페이지 번호 또는 장표 이름 입력 후 Enter" /><div id="jump-list"></div></div>
 
 <div id="notes-panel"><div class="label">Speaker Notes</div><div id="notes-text"></div></div>
@@ -2027,19 +2065,59 @@
 
   // ── 화면 클릭 / 휠 / 리모컨으로 넘기기 ────────────────────────────
   function inUI(e) {
-    return e.target && e.target.closest && e.target.closest('#nav, #notes-panel, #jump');
+    return e.target && e.target.closest && e.target.closest('#nav, #notes-panel, #jump, #rotate');
   }
   document.addEventListener('click', function (e) {
     if (inUI(e)) return;
+    if (swiped) { swiped = false; return; }   // 스와이프로 이미 넘겼다
     if (elJump.classList.contains('show')) { closeJump(); return; }
     show(cur + 1); resetIdle();
   });
+  var isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
   document.addEventListener('contextmenu', function (e) {
     if (inUI(e)) return;
-    e.preventDefault();
+    e.preventDefault();                       // 모바일 길게누르기 메뉴도 막는다
+    if (isTouch) return;                      // 다만 터치에서는 뒤로 가지 않는다
     if (elJump.classList.contains('show')) { closeJump(); return; }
     show(cur - 1); resetIdle();
   });
+
+  // ── 좌우 스와이프로 넘기기 ──────────────────────────────
+  var tx = 0, ty = 0, tt = 0, swiped = false;
+  window.addEventListener('touchstart', function (e) {
+    resetIdle();
+    if (e.touches.length !== 1) { swiped = true; return; }   // 핀치 줌은 무시
+    tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+    tt = Date.now(); swiped = false;
+  }, { passive: true });
+  window.addEventListener('touchend', function (e) {
+    if (inUI(e) || swiped) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - tx, dy = t.clientY - ty;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4 && Date.now() - tt < 800) {
+      swiped = true;                          // 뒤이어 오는 click이 한 장 더 넘기지 않도록
+      show(cur + (dx < 0 ? 1 : -1)); resetIdle();
+    }
+  }, { passive: true });
+
+  // ── 세로 화면 안내 ────────────────────────────────────
+  var elRot = document.getElementById('rotate');
+  var rotSkipped = false;
+  function checkRotate() {
+    var narrow = Math.min(window.innerWidth, window.innerHeight) < 560;
+    var portrait = window.innerHeight > window.innerWidth;
+    if (!portrait) rotSkipped = false;        // 가로로 돌리면 다시 안내할 수 있게
+    elRot.classList.toggle('show', isTouch && narrow && portrait && !rotSkipped);
+  }
+  document.getElementById('rotate-skip').onclick = function (e) {
+    e.stopPropagation(); rotSkipped = true; checkRotate();
+  };
+  window.addEventListener('resize', checkRotate);
+  window.addEventListener('orientationchange', function () { setTimeout(checkRotate, 250); });
+  checkRotate();
+
+  // iOS 사파리는 임의 요소 전체화면을 지원하지 않으므로 버튼을 숨긴다
+  if (!document.documentElement.requestFullscreen) btnFs.style.display = 'none';
 
   var wheelAt = 0;
   window.addEventListener('wheel', function (e) {
